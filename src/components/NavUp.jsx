@@ -12,36 +12,54 @@ export default function NavUp() {
     <div className="bg-[#B756A0] h-16 flex justify-between px-12">
       {/* socials icons */}
       <div className="flex items-center my-auto text-white space-x-4">
-        <div className="bg-white rounded-full p-1">
+        <a
+          href="#"
+          className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+        >
           <FaFacebook className="text-[#B756A0] text-lg" />
-        </div>
-        <div className="bg-white rounded-full p-1">
+        </a>
+        <a
+          href="#"
+          className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+        >
           <FaTwitter className="text-[#B756A0] text-lg" />
-        </div>
-        <div className="bg-white rounded-full p-1">
+        </a>
+        <a
+          href="#"
+          className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+        >
           <FaInstagram className="text-[#B756A0] text-lg" />
-        </div>
-        <div className="bg-white rounded-full p-1">
+        </a>
+        <a
+          href="#"
+          className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+        >
           <FaYoutube className="text-[#B756A0] text-lg" />
-        </div>
+        </a>
       </div>
 
       {/* phone & email */}
-      <div className="text-white flex gap-8 items-center">
+      <div className="text-white flex gap-4 md:gap-8 items-center">
         <div className="flex gap-2 items-center">
-          <div className="bg-white rounded-full p-1">
+          <a
+            href="https://wa.me/905510141450"
+            className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+          >
             <FaWhatsapp className="text-[#B756A0] text-lg" />
-          </div>
-          <a href="https://wa.me/905510141450" className="text-white">
+          </a>
+          <a href="https://wa.me/905510141450" className="text-white hidden md:block">
             0551 014 14 50
           </a>
         </div>
 
         <div className="flex gap-2 items-center">
-          <div className="bg-white rounded-full p-1">
+          <a
+            href="mailto:goncaakarsu35@gmail.com"
+            className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+          >
             <FaEnvelope className="text-[#B756A0] text-lg" />
-          </div>
-          <a href="mailto:goncaakarsu35@gmail.com" className="text-white">
+          </a>
+          <a href="mailto:goncaakarsu35@gmail.com" className="text-white hidden md:block">
             goncaakarsu35@gmail.com
           </a>
         </div>

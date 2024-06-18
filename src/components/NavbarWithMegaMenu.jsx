@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 import {
   Navbar,
   Collapse,
@@ -11,6 +12,7 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
+  useSelect,
 } from '@material-tailwind/react'
 import {
   ChevronDownIcon,
@@ -81,7 +83,10 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (//dropdown menu
+    (
+      { icon, title, description },
+      key //dropdown menu
+    ) => (
       <a href="#" key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           {/* <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -119,18 +124,14 @@ function NavListMenu() {
         offset={{ mainAxis: 20 }}
         placement="bottom"
         allowHover={true}
-    
-       
-      
       >
         <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
+          <Typography as="div" variant="small" className="font-bold">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 text-gray-900 font-bold"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              
               ÜRÜNLER
               <ChevronDownIcon
                 strokeWidth={2.5}
@@ -168,7 +169,7 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           ANASAYFA
@@ -179,14 +180,14 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           HAKKIMIZDA
         </ListItem>
       </Typography>
 
-{/* dropdown menu */}
+      {/* dropdown menu */}
       <NavListMenu />
 
       <Typography
@@ -194,7 +195,7 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           HEALY NEDİR
@@ -205,7 +206,7 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           KAMPANYALAR
@@ -216,7 +217,7 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">S.S.S</ListItem>
       </Typography>
@@ -225,7 +226,7 @@ function NavList() {
         href="#"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           İLETİŞİM
@@ -236,30 +237,57 @@ function NavList() {
 }
 
 export function NavbarWithMegaMenu() {
-  const [openNav, setOpenNav] = React.useState(false)
+  const [openNav, setOpenNav] = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
 
-  React.useEffect(() => {
-    window.addEventListener(
-      'resize',
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    )
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY
+      if (offset > 64) {
+        // Adjust the value as per your requirement
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   //navbar main
   return (
-    <div className="w-full">
-      <Navbar 
-      fullWidth='true'
-       className="mx-auto px-4 py-2">
+    <div
+      className={`${
+        isSticky ? 'sticky top-0 left-0 right-0 z-50  bg-white shadow-md' : ''
+      }w-full`}
+    >
+      <Navbar fullWidth="true" className="mx-auto px-4 py-2">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
+          <a href="#" className="pl-12">
+            <img
+              width="120"
+              height="38"
+              src="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png"
+              class="custom-logo"
+              alt="Healy Shop Turkiye"
+              decoding="async"
+              srcset="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png 1x, https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1.png 2x"
+              sizes="(max-width: 120px) 100vw, 120px"
+            ></img>
+          </a>
+
+          {/* <Typography
             as="a"
             href="#"
             variant="h6"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
             Material Tailwind
-          </Typography>
+          </Typography> */}
           <div className="hidden lg:block">
             <NavList />
           </div>
