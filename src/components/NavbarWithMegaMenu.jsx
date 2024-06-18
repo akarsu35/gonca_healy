@@ -243,6 +243,7 @@ export function NavbarWithMegaMenu() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY
+      console.log(offset)
       if (offset > 64) {
         // Adjust the value as per your requirement
         setIsSticky(true)

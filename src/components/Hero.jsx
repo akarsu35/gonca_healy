@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <div className="w-full min-h-[600px] flex items-center ">
-      <div className="w-72 absolute ml-8 top-36 ">
+    <div className="relative w-full min-h-[600px] flex items-center ">
+      <div className="w-72 absolute ml-8 top-0 ">
         <img
           src="./images/healy-banner1.png"
           alt=""
