@@ -16,10 +16,10 @@ const InstagramEmbed = ({ url }) => {
   return (
     <div className="flex justify-center">
       <blockquote
-        className="instagram-media block"
+        className="instagram-media"
         data-instgrm-permalink={url}
         data-instgrm-version="14"
-        style={{ maxWidth: '540px', width: '100%' }}
+        style={{ width: '100%' }}
       ></blockquote>
     </div>
   )

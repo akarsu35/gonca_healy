@@ -2,7 +2,7 @@ import React from 'react'
 
 const HealyDeviceInfo = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-4xl h-[650px] overflow-auto mx-auto p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-center text-blue-600 mb-6">
         Healy Frequency Cihazı Nedir?
       </h1>
