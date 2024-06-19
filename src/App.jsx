@@ -3,6 +3,7 @@ import { NavbarWithMegaMenu } from './components/NavbarWithMegaMenu'
 import NavUp from './components/NavUp'
 import Hero from './components/Hero'
 import Home from './components/Home'
+import HealyList from './components/HealyList'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
       <Hero />
       <Home />
-      <Hero />
+      <HealyList/>
       <Hero />
       <Hero />
       <Hero />

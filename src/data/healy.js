@@ -35,3 +35,4 @@ const healy = [
     img: './images/maghealy-professional.jpg',
   },
 ]
+export default healy
