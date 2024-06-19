@@ -4,6 +4,7 @@ import NavUp from './components/NavUp'
 import Hero from './components/Hero'
 import Home from './components/Home'
 import HealyList from './components/HealyList'
+import CarouselFromYou from './components/CarouselFromYou'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Hero />
       <Home />
       <HealyList/>
-      <Hero />
+      <CarouselFromYou/>
       <Hero />
       <Hero />
     </>
