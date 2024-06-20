@@ -15,7 +15,7 @@ export default function Healy({ id, name, img }) {
           <img src={img} alt={name} />
         </CardHeader>
         <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
+          <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
             {name}
           </Typography>
         </CardBody>
