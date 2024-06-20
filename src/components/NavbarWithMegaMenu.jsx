@@ -243,7 +243,7 @@ export function NavbarWithMegaMenu() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY
-      console.log(offset)
+      // console.log(offset)
       if (offset > 64) {
         // Adjust the value as per your requirement
         setIsSticky(true)
@@ -266,17 +266,17 @@ export function NavbarWithMegaMenu() {
         isSticky ? 'sticky top-0 left-0 right-0 z-50  bg-white shadow-md' : ''
       }w-full`}
     >
-      <Navbar fullWidth="true" className="mx-auto px-4 py-2">
+      <Navbar fullWidth={true} className="mx-auto px-4 py-2">
         <div className="flex items-center justify-between text-blue-gray-900">
           <a href="#" className="pl-12">
             <img
               width="120"
               height="38"
               src="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png"
-              class="custom-logo"
+              className="custom-logo"
               alt="Healy Shop Turkiye"
               decoding="async"
-              srcset="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png 1x, https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1.png 2x"
+              srcSet="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png 1x, https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1.png 2x"
               sizes="(max-width: 120px) 100vw, 120px"
             ></img>
           </a>
