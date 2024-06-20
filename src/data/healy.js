@@ -6,7 +6,7 @@ const healy = [
   },
   {
     id: 2,
-    name: 'Healy Holistik Edition',
+    name: 'Healy Holistic Edition',
     img: './images/healy-holistic.jpg',
   },
   {
@@ -34,5 +34,6 @@ const healy = [
     name: 'Professionel Edition',
     img: './images/maghealy-professional.jpg',
   },
+ 
 ]
 export default healy

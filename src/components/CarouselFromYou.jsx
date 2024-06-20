@@ -4,17 +4,17 @@ import data from '../data/carouselFromYou'
 export default function CarouselFromYou() {
     
   return (
-    <div className="my-8">
+    <div className="my-8 flex flex-col justify-center items-center">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-3xl sm:text-5xl font-bold mb-2">Sizden Gelenler</h1>
         <div className="w-[22rem] bg-[#BFA55E] h-2 mb-6 rounded-md"></div>
       </div>
       <Carousel
-        className="rounded-xl h-[100vh]"
+        className="rounded-xl h-[100vh] w-[90%]"
         prevArrow={({ handlePrev }) => (
           <button
             onClick={handlePrev}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2  p-2 rounded-full hover:bg-[#C0A55E]"
+            className="absolute top-1/2 left-2 transform -translate-y-1/2  p-2 rounded-full bg-[#C0A55E]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ export default function CarouselFromYou() {
         nextArrow={({ handleNext }) => (
           <button
             onClick={handleNext}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2  p-2 rounded-full hover:bg-[#B756A0] "
+            className="absolute top-1/2 right-2 transform -translate-y-1/2  p-2 rounded-full bg-[#B756A0] "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -166,14 +166,17 @@ export default function CarouselFromYou() {
         {data.map((d, index) => {
           const { img, id, name, message } = d
           return (
-            <div className="relative h-full w-full" key={index}>
+            <div
+              className="relative h-full w-full flex justify-center items-center  "
+              key={index}
+            >
               <img
                 src={img}
                 alt={name}
-                className="h-full w-full object-contain"
+                className="h-[90%] object-contain shadow-customrl "
               />
-              <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/50">
-                {/* <div className="w-3/4 text-center md:w-2/4">
+              {/* <div className="absolute inset-0 grid h-full w-full place-items-center">
+                <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -196,8 +199,8 @@ export default function CarouselFromYou() {
                         Gallery
                       </Button>
                     </div>
-                  </div> */}
-              </div>
+                  </div>
+              </div> */}
             </div>
           )
         })}

@@ -6,7 +6,12 @@ import {
   Typography,
   Button,
 } from '@material-tailwind/react'
+import { useState } from 'react'
+import Gold from './Gold'
+
 export default function Healy({ id, name, img }) {
+ 
+
   return (
     
       <Card className="flex p-2 md:p-0 justify-center items-center mt-6 w-[21rem] hover:shadow-2xl">
@@ -20,7 +25,7 @@ export default function Healy({ id, name, img }) {
           </Typography>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button>ÜRÜNÜ İNCELE</Button>
+          <Button >ÜRÜNÜ İNCELE</Button>
         </CardFooter>
       </Card>
     
