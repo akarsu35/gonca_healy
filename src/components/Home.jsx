@@ -4,7 +4,7 @@ import YouTubeEmbed from './YoutubeEmbed'
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center flex-col mt-8">
+    <div className="flex justify-center items-center flex-col mt-8 ">
       <h1 className="text-3xl sm:text-5xl font-bold mb-2">Healy Nedir ?</h1>
       <div className="w-[22rem] bg-[#63A486] h-2 mb-4 rounded-md"></div>
       <div className="w-[95%] min-h-[600px] mt-4 flex flex-col md:flex-row items-center justify-center">
