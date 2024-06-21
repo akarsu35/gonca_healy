@@ -34,7 +34,7 @@ export default function SocialMediaLeft() {
     <div>
       {isFixed && (
         <div>
-          <div className="z-10 fixed justify-between top-[50%] hidden lg:block">
+          <div className="flex flex-col z-10 fixed justify-between top-[50%]">
             {/* socials icons */}
 
             {/* phone & email */}
@@ -66,10 +66,10 @@ export default function SocialMediaLeft() {
             </div>
           </div>
 
-          <div className="fixed bottom-32 w-full flex justify-around z-20 space-y-2 lg:hidden">
+          {/* <div className="fixed bottom-32 w-full flex justify-around z-20 space-y-2 lg:hidden"> */}
             {/* animation social icons */}
 
-            <SocialIcons />
+            {/* <SocialIcons /> */}
 
             {/* <div className="w-16 bg-[#B756A0] rounded-full flex justify-center items-center h-16">
               <a href="https://wa.me/905510141450">
@@ -91,7 +91,7 @@ export default function SocialMediaLeft() {
                 <FaInstagram className="text-white text-[2rem]" />
               </a>
             </div> */}
-          </div>
+          {/* </div> */}
         </div>
       )}
     </div>
