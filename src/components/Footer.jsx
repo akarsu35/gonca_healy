@@ -30,15 +30,15 @@ const Footer = () => {
               <FaTwitter className="text-white text-lg" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
+              target="_blank" // Bağlantının yeni bir sekmede açılması için
+              rel="noopener noreferrer" // Güvenlik için
               className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+              aria-label="Instagram"
             >
               <FaInstagram className="text-white text-lg" />
             </a>
-            <a
-              href="#"
-              className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
-            >
+            <a className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <FaYoutube className="text-white text-lg" />
             </a>
           </div>

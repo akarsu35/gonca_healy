@@ -25,8 +25,11 @@ export default function NavUp() {
           <FaTwitter className="text-[#B756A0] text-lg" />
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
+          target="_blank" // Bağlantının yeni bir sekmede açılması için
+          rel="noopener noreferrer" // Güvenlik için
           className="bg-white rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+          aria-label="Instagram"
         >
           <FaInstagram className="text-[#B756A0] text-lg" />
         </a>
@@ -47,7 +50,10 @@ export default function NavUp() {
           >
             <FaWhatsapp className="text-[#B756A0] text-lg" />
           </a>
-          <a href="https://wa.me/905510141450" className="text-white hidden md:block">
+          <a
+            href="https://wa.me/905510141450"
+            className="text-white hidden md:block"
+          >
             0551 014 14 50
           </a>
         </div>
@@ -59,7 +65,10 @@ export default function NavUp() {
           >
             <FaEnvelope className="text-[#B756A0] text-lg" />
           </a>
-          <a href="mailto:goncaakarsu35@gmail.com" className="text-white hidden md:block">
+          <a
+            href="mailto:goncaakarsu35@gmail.com"
+            className="text-white hidden md:block"
+          >
             goncaakarsu35@gmail.com
           </a>
         </div>
