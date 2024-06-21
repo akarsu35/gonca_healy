@@ -34,6 +34,10 @@ const healy = [
     name: 'Professionel Edition',
     img: './images/maghealy-professional.jpg',
   },
- 
+  {
+    id: 8,
+    name: 'Healy Coil',
+    img: './images/Coil.png',
+  },
 ]
 export default healy

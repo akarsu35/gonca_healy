@@ -5,6 +5,8 @@ import Hero from './components/Hero'
 import Home from './components/Home'
 import HealyList from './components/HealyList'
 import CarouselFromYou from './components/CarouselFromYou'
+import FactFigures from './components/FactFigures'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
       <Home />
       <HealyList/>
       <CarouselFromYou/>
-      <Hero />
-      <Hero />
+      <FactFigures/>
+      <Footer/>
     </>
   )
 }
