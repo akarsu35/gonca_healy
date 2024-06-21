@@ -7,14 +7,14 @@ import HealyList from './components/HealyList'
 import CarouselFromYou from './components/CarouselFromYou'
 import FactFigures from './components/FactFigures'
 import Footer from './components/Footer'
+import SocialMediaLeft from './components/SocialMediaLeft'
 
 function App() {
   return (
     <>
+    <SocialMediaLeft/>
       <NavUp />
-
       <NavbarWithMegaMenu />
-
       <Hero />
       <Home />
       <HealyList/>
