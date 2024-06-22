@@ -40,7 +40,7 @@ export default function SocialMediaLeft() {
             {/* phone & email */}
             <div className="w-[4rem] bg-[#B756A0] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
               <a href="https://wa.me/905510141450">
-                <FaWhatsapp className="text-white text-[2.25rem]" />
+                <FaWhatsapp className="text-white text-[2.25rem] swing-animation" />
               </a>
               <a
                 href="https://wa.me/905510141450"
@@ -54,24 +54,24 @@ export default function SocialMediaLeft() {
                 rel="noopener noreferrer" // Güvenlik için
                 aria-label="Instagram"
               >
-                <FaInstagram className="text-white text-[2rem]" />
+                <FaInstagram className="text-white text-[2rem] swing-animation" />
               </a>
             </div>
 
             <div className="w-[3rem] bg-[#BFA55E] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
               <a href="mailto:goncaakarsu35@gmail.com">
-                <FaEnvelope className="text-white text-[1.75rem]" />
+                <FaEnvelope className="text-white text-[1.75rem] swing-animation" />
               </a>
               <a href="mailto:goncaakarsu35@gmail.com"></a>
             </div>
           </div>
 
           {/* <div className="fixed bottom-32 w-full flex justify-around z-20 space-y-2 lg:hidden"> */}
-            {/* animation social icons */}
+          {/* animation social icons */}
 
-            {/* <SocialIcons /> */}
+          {/* <SocialIcons /> */}
 
-            {/* <div className="w-16 bg-[#B756A0] rounded-full flex justify-center items-center h-16">
+          {/* <div className="w-16 bg-[#B756A0] rounded-full flex justify-center items-center h-16">
               <a href="https://wa.me/905510141450">
                 <FaWhatsapp className="text-white text-[2.25rem]" />
               </a>
@@ -81,7 +81,7 @@ export default function SocialMediaLeft() {
               ></a>
             </div> */}
 
-            {/* <div className="w-16 bg-[#5297C8] rounded-full flex justify-center items-center h-16">
+          {/* <div className="w-16 bg-[#5297C8] rounded-full flex justify-center items-center h-16">
               <a
                 href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
                 target="_blank" // Bağlantının yeni bir sekmede açılması için

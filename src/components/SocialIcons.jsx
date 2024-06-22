@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaTelegram, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 import { CiFacebook } from 'react-icons/ci'
 import { FaXTwitter } from 'react-icons/fa6'
 import { CiYoutube } from 'react-icons/ci'
@@ -27,7 +27,7 @@ const SocialIcons = () => {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <FaInstagram className="icon text-[#B756A0] insta swing-animation w-8 h-8 " />
+          <FaInstagram className="icon text-white insta swing-animation w-8 h-8 " />
         </a>
       </div>
 
@@ -41,8 +41,14 @@ const SocialIcons = () => {
       /> */}
       <div className="flex justify-center items-center bg-[#B756A0] bg-opacity-90 w-12 h-12 rounded-full">
         <a href="https://wa.me/905510141450" target="_blank">
-          <FaWhatsapp className="icon text-[#5297C8] whatsapp swing-animation w-8 h-8" />
+          <FaWhatsapp className="icon text-white whatsapp swing-animation w-8 h-8" />
         </a>
+      </div>
+      <div className="flex justify-center items-center bg-[#B756A0] bg-opacity-90 w-12 h-12 rounded-full">
+        <a href="mailto:goncaakarsu35@gmail.com">
+          <FaEnvelope className="text-white text-[1.75rem] swing-animation " />
+        </a>
+        <a href="mailto:goncaakarsu35@gmail.com"></a>
       </div>
 
       {/* <CiYoutube
