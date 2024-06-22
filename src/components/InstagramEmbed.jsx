@@ -1,7 +1,8 @@
 // InstagramEmbed.js
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const InstagramEmbed = ({ url }) => {
+  const [isUpdate,setIsUpdate]=useState(true)
   useEffect(() => {
     const script = document.createElement('script')
     script.async = true
@@ -11,7 +12,7 @@ const InstagramEmbed = ({ url }) => {
     return () => {
       document.body.removeChild(script)
     }
-  }, [url])
+  },)
 
   return (
     <div className="flex justify-center items-center shadow-customr rounded-xl sm:w-full ">

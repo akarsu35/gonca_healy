@@ -30,6 +30,8 @@ import {
   TagIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom'
+
 
 const navListMenuItems = [
   {
@@ -74,6 +76,12 @@ const navListMenuItems = [
     icon: NewspaperIcon,
     path: '/maghealy-professional-edition',
   },
+  {
+    title: 'COİL',
+    description: 'Find the perfect solution for your needs.',
+    icon: NewspaperIcon,
+    path: '/coil',
+  },
 ]
 
 function NavListMenu() {
@@ -84,7 +92,7 @@ function NavListMenu() {
       { icon, title, description,path },
       key //dropdown menu
     ) => (
-      <a href="#" key={key}>
+      <Link to={path} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
          
           <div>
@@ -103,7 +111,7 @@ function NavListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   )
 
@@ -163,9 +171,10 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          ANASAYFA
+          <Link to="/">ANASAYFA</Link>
         </ListItem>
       </Typography>
+
       <Typography
         as="a"
         href="#"
@@ -174,7 +183,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          HAKKIMIZDA
+          <Link to="/home">HAKKIMIZDA</Link>
         </ListItem>
       </Typography>
 
@@ -189,7 +198,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          HEALY NEDİR
+          <Link to="/home"> HEALY NEDİR</Link>
         </ListItem>
       </Typography>
       <Typography
@@ -298,144 +307,3 @@ export function NavbarWithMegaMenu() {
   )
 }
 
-// import { Link } from 'react-router-dom'
-// import {
-//   Menu,
-//   Collapse,
-//   MenuHandler,
-//   MenuList,
-//   MenuItem,
-//   Typography,
-//   ListItem,
-// } from '@material-tailwind/react'
-// import { ChevronDownIcon } from '@heroicons/react/24/outline'
-// import {
-//   SquaresPlusIcon,
-//   UserGroupIcon,
-//   Bars4Icon,
-//   SunIcon,
-//   GlobeAmericasIcon,
-//   PhoneIcon,
-//   NewspaperIcon,
-// } from '@heroicons/react/24/solid'
-// import React, { useEffect, useState } from 'react'
-
-// const navListMenuItems = [
-//   {
-//     title: 'HEALY GOLD EDİTİON',
-//     description: 'Find the perfect solution for your needs.',
-//     icon: SquaresPlusIcon,
-//     path: '/healy-gold-edition',
-//   },
-//   {
-//     title: 'HEALY HOLİSTİC EDİTİON',
-//     description: 'Meet and learn about our dedication',
-//     icon: UserGroupIcon,
-//     path: '/healy-holistic-edition',
-//   },
-//   {
-//     title: 'HEALY RESONANCE EDİTİON',
-//     description: 'Find the perfect solution for your needs.',
-//     icon: Bars4Icon,
-//     path: '/healy-resonance-edition',
-//   },
-//   {
-//     title: 'HEALY RESONANCE PLUS EDİTİON',
-//     description: 'Learn how we can help you achieve your goals.',
-//     icon: SunIcon,
-//     path: '/healy-resonance-plus-edition',
-//   },
-//   {
-//     title: 'HEALY PROFESSİONAL EDİTİON',
-//     description: 'Reach out to us for assistance or inquiries',
-//     icon: GlobeAmericasIcon,
-//     path: '/healy-professional-edition',
-//   },
-//   {
-//     title: 'MAGHEALY CLASSİC EDİTİON',
-//     description: 'Find the perfect solution for your needs.',
-//     icon: PhoneIcon,
-//     path: '/maghealy-classic-edition',
-//   },
-//   {
-//     title: 'MAGHEALY PROFESSİONAL EDİTİON',
-//     description: 'Read insightful articles, tips, and expert opinions.',
-//     icon: NewspaperIcon,
-//     path: '/maghealy-professional-edition',
-//   },
-// ]
-
-// function NavListMenu() {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false)
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-//   const renderItems = navListMenuItems.map(
-//     ({ icon, title, description, path }, key) => (
-//       <Link to={path} key={key}>
-//         <MenuItem className="flex items-center gap-3 rounded-lg">
-//           <div>
-//             <Typography
-//               variant="h6"
-//               color="blue-gray"
-//               className="flex items-center text-sm font-bold"
-//             >
-//               {title}
-//             </Typography>
-//             <Typography
-//               variant="paragraph"
-//               className="text-xs !font-medium text-blue-gray-500"
-//             >
-//               {description}
-//             </Typography>
-//           </div>
-//         </MenuItem>
-//       </Link>
-//     )
-//   )
-
-//   return (
-//     <React.Fragment>
-//       <Menu
-//         open={isMenuOpen}
-//         handler={setIsMenuOpen}
-//         offset={{ mainAxis: 20 }}
-//         placement="bottom"
-//         allowHover={true}
-//       >
-//         <MenuHandler>
-//           <Typography as="div" variant="small" className="font-bold">
-//             <ListItem
-//               className="flex items-center gap-2 py-2 pr-4 text-gray-900 font-bold"
-//               selected={isMenuOpen || isMobileMenuOpen}
-//               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-//             >
-//               ÜRÜNLER
-//               <ChevronDownIcon
-//                 strokeWidth={2.5}
-//                 className={`hidden h-3 w-3 transition-transform lg:block ${
-//                   isMenuOpen ? 'rotate-180' : ''
-//                 }`}
-//               />
-//               <ChevronDownIcon
-//                 strokeWidth={2.5}
-//                 className={`block h-3 w-3 transition-transform lg:hidden ${
-//                   isMobileMenuOpen ? 'rotate-180' : ''
-//                 }`}
-//               />
-//             </ListItem>
-//           </Typography>
-//         </MenuHandler>
-//         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-//           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
-//             {renderItems}
-//           </ul>
-//         </MenuList>
-//       </Menu>
-//       <div className="block lg:hidden">
-//         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
-//       </div>
-//     </React.Fragment>
-//   )
-// }
-
-// export default NavListMenu

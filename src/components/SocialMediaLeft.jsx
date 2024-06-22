@@ -16,7 +16,7 @@ export default function SocialMediaLeft() {
     const handleScroll = () => {
       const offset = window.scrollY
       // console.log(offset)
-      if (offset > 125) {
+      if (offset > 50) {
         // Adjust the value as per your requirement
         setIsFixed(true)
       } else {
