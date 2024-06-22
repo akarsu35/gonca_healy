@@ -14,7 +14,7 @@ function Icon({ id, open }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="1 1 24 24"
+      viewBox="0 0 24 24"
       strokeWidth={2}
       stroke="currentColor"
       className={`${
@@ -29,17 +29,17 @@ function Icon({ id, open }) {
     </svg>
   )
 }
+
 import healy from '../../data/healy'
-export default function HealyHolisticEdition() {
- const [open, setOpen] = React.useState(0)
+
+export default function HealyProfessionalEdition() {
+  const [open, setOpen] = React.useState(0)
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value)
-   
 
   return (
     <>
-      <div key={healy[1].id} className="flex w-[90%]">
-        
+      <div key={healy[4].id} className="flex w-[90%]">
         <div>
           <Accordion
             open={open === 1}
@@ -49,7 +49,7 @@ export default function HealyHolisticEdition() {
             <AccordionHeader onClick={() => handleOpen(1)}>
               Açıklama
             </AccordionHeader>
-            <AccordionBody>{healy[1].desc}</AccordionBody>
+            <AccordionBody>{healy[4].desc}</AccordionBody>
           </Accordion>
           <Accordion
             open={open === 2}
@@ -59,7 +59,7 @@ export default function HealyHolisticEdition() {
             <AccordionHeader onClick={() => handleOpen(2)}>
               Kutu İçeriği
             </AccordionHeader>
-            <AccordionBody>{healy[1].delivery}</AccordionBody>
+            <AccordionBody>{healy[4].delivery}</AccordionBody>
           </Accordion>
           <Accordion
             open={open === 3}
@@ -69,7 +69,7 @@ export default function HealyHolisticEdition() {
             <AccordionHeader onClick={() => handleOpen(3)}>
               Teknik Bilgiler
             </AccordionHeader>
-            <AccordionBody>{healy[1].tech}</AccordionBody>
+            <AccordionBody>{healy[4].tech}</AccordionBody>
           </Accordion>
           <Accordion
             open={open === 4}
@@ -79,11 +79,10 @@ export default function HealyHolisticEdition() {
             <AccordionHeader onClick={() => handleOpen(4)}>
               Riskler & Uyarılar
             </AccordionHeader>
-            <AccordionBody>{healy[1].risk}</AccordionBody>
+            <AccordionBody>{healy[4].risk}</AccordionBody>
           </Accordion>
         </div>
       </div>
     </>
   )
-  
 }
