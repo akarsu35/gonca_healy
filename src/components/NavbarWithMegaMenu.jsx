@@ -171,7 +171,8 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/">ANASAYFA</Link>
+          {/* <Link to="/">ANASAYFA</Link> */}
+          ANASAYFA
         </ListItem>
       </Typography>
 
@@ -183,7 +184,8 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/home">HAKKIMIZDA</Link>
+          {/* <Link to="/home">HAKKIMIZDA</Link> */}
+          HAKKIMIZDA
         </ListItem>
       </Typography>
 
@@ -198,7 +200,8 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/home"> HEALY NEDİR</Link>
+          {/* <Link to="/home"> HEALY NEDİR</Link> */}
+          HEALY NEDİR
         </ListItem>
       </Typography>
       <Typography
@@ -212,7 +215,7 @@ function NavList() {
           KAMPANYALAR
         </ListItem>
       </Typography>
-      <Typography
+      {/* <Typography
         as="a"
         href="#"
         variant="small"
@@ -220,7 +223,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">S.S.S</ListItem>
-      </Typography>
+      </Typography> */}
       <Typography
         as="a"
         href="#"

@@ -21,7 +21,7 @@ function App() {
       <NavUp />
       <NavbarWithMegaMenu />
 
-      <Routes>
+      {/* <Routes>
       
         <Route
           path="/healy-holistic-edition"
@@ -35,12 +35,12 @@ function App() {
         <Route path="/factfigures" element={<FactFigures/>} />
     
     
-      </Routes>
-      {/* <Hero /> */}
-      {/* <Home /> */}
-      {/* <HealyList /> */}
-      {/* <CarouselFromYou /> */}
-      {/* <FactFigures /> */}
+      </Routes> */}
+      <Hero />
+      <Home />
+      <HealyList />
+      <CarouselFromYou />
+      <FactFigures />
       <Footer />
       {/* <HealyDetails /> */}
     </>
