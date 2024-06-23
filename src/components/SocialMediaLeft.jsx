@@ -10,26 +10,26 @@ import {
 import '../App.css'
 import SocialIcons from './SocialIcons'
 export default function SocialMediaLeft() {
-  const [isFixed, setIsFixed] = useState(false)
+  const [isFixed, setIsFixed] = useState(true)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY
-      // console.log(offset)
-      if (offset > 50) {
-        // Adjust the value as per your requirement
-        setIsFixed(true)
-      } else {
-        setIsFixed(false)
-      }
-    }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const offset = window.scrollY
+  //     // console.log(offset)
+  //     if (offset >= -1) {
+  //       // Adjust the value as per your requirement
+  //       setIsFixed(true)
+  //     } else {
+  //       setIsFixed(false)
+  //     }
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
+  //   window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
   return (
     <div>
       {isFixed && (
@@ -37,15 +37,21 @@ export default function SocialMediaLeft() {
           <div className="flex flex-col z-10 fixed justify-between top-[50%]">
             {/* socials icons */}
 
-            {/* phone & email */}
+            {/* phone & email & refferal link*/}
+            <div className="w-[4.5rem] bg-green-700 rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
+              <a
+                href="https://eu.healy.shop/?partnername=6020-9879-1624"
+                className="text-white swing-animation text-center"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Referans Link
+              </a>
+            </div>
             <div className="w-[4rem] bg-[#B756A0] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
-              <a href="https://wa.me/905510141450">
+              <a href="https://wa.me/905510141450" target='_blank'>
                 <FaWhatsapp className="text-white text-[2.25rem] swing-animation" />
               </a>
-              <a
-                href="https://wa.me/905510141450"
-                className="text-white hidden md:block"
-              ></a>
             </div>
             <div className="w-[3.5rem] bg-[#5297C8] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
               <a

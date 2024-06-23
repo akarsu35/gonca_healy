@@ -8,7 +8,7 @@ export default function HealyList() {
   const [selectedHealy,setSelectedHealy]=useState(null)
   return (
     
-      <div className="flex flex-col justify-center items-center mt-10">
+      <div id='healylist' className="flex flex-col justify-center items-center mt-10">
         <h1 className="text-3xl sm:text-5xl font-bold mb-2">Healy Ürünleri</h1>
         <div className="w-[22rem] bg-[#B86BA0] h-2 mb-6 rounded-md"></div>
         <div className="md:ml-5 w-[90%] flex">

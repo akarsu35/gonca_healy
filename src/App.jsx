@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavbarWithMegaMenu } from './components/NavbarWithMegaMenu'
 import NavUp from './components/NavUp'
 import Hero from './components/Hero'
-import Home from './components/Home'
+import Main from './components/Main'
 import HealyList from './components/HealyList'
 import CarouselFromYou from './components/CarouselFromYou'
 import FactFigures from './components/FactFigures'
@@ -13,6 +13,17 @@ import { Routes,Route } from 'react-router-dom'
 import HealyHolisticEdition from './components/healy-details/HealyHolisticEdition'
 import Healy from './components/Healy'
 import HealyGoldEdition from './components/healy-details/HealyGoldEdition'
+import Home from './components/Home'
+import HealyResonanceEdition from './components/healy-details/HealyResonanceEdition'
+import HealyResonancePlusEdition from './components/healy-details/HealyResonancePlusEdition'
+import HealyProfessionalEdition from './components/healy-details/HealyProfessionalEdition'
+import MagHealyClassic from './components/healy-details/MagHealyClassic'
+import MagHealyProfessional from './components/healy-details/MagHealyProfessional'
+import Coil from './components/healy-details/Coil'
+import AboutUs from './components/AboutUs'
+import WhatIsHealy from './components/WhatIsHealy'
+import Campains from './components/Campaigns'
+import ContactUs from './components/ContactUs'
 
 function App() {
   return (
@@ -20,6 +31,36 @@ function App() {
       <SocialMediaLeft />
       <NavUp />
       <NavbarWithMegaMenu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/healy-gold-edition" element={<HealyGoldEdition />} />
+        <Route
+          path="/healy-holistic-edition"
+          element={<HealyHolisticEdition />}
+        />
+        <Route
+          path="/healy-resonance-edition"
+          element={<HealyResonanceEdition />}
+        />
+        <Route
+          path="/healy-resonance-plus-edition"
+          element={<HealyResonancePlusEdition />}
+        />
+        <Route
+          path="/healy-professional-edition"
+          element={<HealyProfessionalEdition />}
+        />
+        <Route path="/maghealy-classic-edition" element={<MagHealyClassic />} />
+        <Route
+          path="/maghealy-professional-edition"
+          element={<MagHealyProfessional />}
+        />
+        <Route path="/coil" element={<Coil />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="whatis-healy" element={<WhatIsHealy />} />
+        <Route path="/campaigns" element={<Campains />} />
+        <Route path="/contact-us" element={<ContactUs/>} />
+      </Routes>
 
       {/* <Routes>
       
@@ -36,11 +77,11 @@ function App() {
     
     
       </Routes> */}
-      <Hero />
-      <Home />
+      {/* <Hero />
+      <Main />
       <HealyList />
       <CarouselFromYou />
-      <FactFigures />
+      <FactFigures /> */}
       <Footer />
       {/* <HealyDetails /> */}
     </>

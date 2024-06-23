@@ -38,49 +38,60 @@ export default function HealyHolisticEdition() {
 
   return (
     <>
-      <div key={healy[1].id} className="flex w-[90%]">
-        
-        <div>
-          <Accordion
-            open={open === 1}
-            animate={CUSTOM_ANIMATION}
-            icon={<Icon id={1} open={open} />}
-          >
-            <AccordionHeader onClick={() => handleOpen(1)}>
-              Açıklama
-            </AccordionHeader>
-            <AccordionBody>{healy[1].desc}</AccordionBody>
-          </Accordion>
-          <Accordion
-            open={open === 2}
-            animate={CUSTOM_ANIMATION}
-            icon={<Icon id={2} open={open} />}
-          >
-            <AccordionHeader onClick={() => handleOpen(2)}>
-              Kutu İçeriği
-            </AccordionHeader>
-            <AccordionBody>{healy[1].delivery}</AccordionBody>
-          </Accordion>
-          <Accordion
-            open={open === 3}
-            animate={CUSTOM_ANIMATION}
-            icon={<Icon id={3} open={open} />}
-          >
-            <AccordionHeader onClick={() => handleOpen(3)}>
-              Teknik Bilgiler
-            </AccordionHeader>
-            <AccordionBody>{healy[1].tech}</AccordionBody>
-          </Accordion>
-          <Accordion
-            open={open === 4}
-            animate={CUSTOM_ANIMATION}
-            icon={<Icon id={4} open={open} />}
-          >
-            <AccordionHeader onClick={() => handleOpen(4)}>
-              Riskler & Uyarılar
-            </AccordionHeader>
-            <AccordionBody>{healy[1].risk}</AccordionBody>
-          </Accordion>
+      <div
+        key={healy[1].id}
+        className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
+      >
+        <div className="flex w-[90%] flex-col lg:flex-row">
+          <div className=" mr-10">
+            <img
+              src={healy[1].img}
+              alt={healy[1].name}
+              className="w-[90rem] rounded-xl"
+            />
+          </div>
+          <div>
+            <Accordion
+              open={open === 1}
+              animate={CUSTOM_ANIMATION}
+              icon={<Icon id={1} open={open} />}
+            >
+              <AccordionHeader onClick={() => handleOpen(1)}>
+                Açıklama
+              </AccordionHeader>
+              <AccordionBody>{healy[1].desc}</AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 2}
+              animate={CUSTOM_ANIMATION}
+              icon={<Icon id={2} open={open} />}
+            >
+              <AccordionHeader onClick={() => handleOpen(2)}>
+                Kutu İçeriği
+              </AccordionHeader>
+              <AccordionBody>{healy[1].delivery}</AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 3}
+              animate={CUSTOM_ANIMATION}
+              icon={<Icon id={3} open={open} />}
+            >
+              <AccordionHeader onClick={() => handleOpen(3)}>
+                Teknik Bilgiler
+              </AccordionHeader>
+              <AccordionBody>{healy[1].tech}</AccordionBody>
+            </Accordion>
+            <Accordion
+              open={open === 4}
+              animate={CUSTOM_ANIMATION}
+              icon={<Icon id={4} open={open} />}
+            >
+              <AccordionHeader onClick={() => handleOpen(4)}>
+                Riskler & Uyarılar
+              </AccordionHeader>
+              <AccordionBody>{healy[1].risk}</AccordionBody>
+            </Accordion>
+          </div>
         </div>
       </div>
     </>

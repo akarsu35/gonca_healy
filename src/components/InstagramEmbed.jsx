@@ -12,7 +12,7 @@ const InstagramEmbed = ({ url }) => {
     return () => {
       document.body.removeChild(script)
     }
-  },)
+  },[isUpdate])
 
   return (
     <div className="flex justify-center items-center shadow-customr rounded-xl sm:w-full ">

@@ -83,35 +83,38 @@ const navListMenuItems = [
     path: '/coil',
   },
 ]
-
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const renderItems = navListMenuItems.map(
     (
-      { icon, title, description,path },
+      { icon, title, description, path },
       key //dropdown menu
     ) => (
       <Link to={path} key={key}>
+      <a href='#' key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
-         
           <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold"
-            >
-              {title}
-            </Typography>
-            <Typography
-              variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
-            >
-              {description}
-            </Typography>
+           
+              <Typography
+                variant="h6"
+                color="blue-gray"
+                className="flex items-center text-sm font-bold"
+              >
+                {title}
+              </Typography>
+              <Typography
+                variant="paragraph"
+                className="text-xs !font-medium text-blue-gray-500"
+              >
+                {description}
+              </Typography>
+           
           </div>
         </MenuItem>
-      </Link>
+      </a>
+
+      </Link> 
     )
   )
 
@@ -171,8 +174,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          {/* <Link to="/">ANASAYFA</Link> */}
-          ANASAYFA
+          <Link to="/">ANASAYFA</Link>
         </ListItem>
       </Typography>
 
@@ -184,8 +186,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          {/* <Link to="/home">HAKKIMIZDA</Link> */}
-          HAKKIMIZDA
+          <Link to="/about-us">HAKKIMIZDA</Link>
         </ListItem>
       </Typography>
 
@@ -200,8 +201,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          {/* <Link to="/home"> HEALY NEDİR</Link> */}
-          HEALY NEDİR
+          <Link to="/whatis-healy"> HEALY NEDİR</Link>
         </ListItem>
       </Typography>
       <Typography
@@ -212,7 +212,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          KAMPANYALAR
+          <Link to="/campaigns"> KAMPANYALAR</Link>
         </ListItem>
       </Typography>
       {/* <Typography
@@ -232,7 +232,7 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          İLETİŞİM
+          <Link to="/contact-us"> İLETİŞİM</Link>
         </ListItem>
       </Typography>
     </List>
