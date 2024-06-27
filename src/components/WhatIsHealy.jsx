@@ -1,5 +1,9 @@
+import HealyDeviceInfo from "./HealyDeviceInfo";
+
 export default function WhatIsHealy() {
   return (
-    <div>WhatIsHealy</div>
+    <div className="">
+      <HealyDeviceInfo/>
+    </div>
   )
 }

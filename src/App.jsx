@@ -28,7 +28,7 @@ import ContactUs from './components/ContactUs'
 function App() {
   return (
     <>
-      <SocialMediaLeft />
+      
       <NavUp />
       <NavbarWithMegaMenu />
       <Routes>

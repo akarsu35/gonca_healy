@@ -2,7 +2,7 @@ import React from 'react'
 
 const HealyDeviceInfo = () => {
   return (
-    <div className="max-w-4xl h-[650px] overflow-auto mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="w-[90%] h-[72.7vh] overflow-auto mx-auto p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-center text-blue-600 mb-6">
         Healy Frequency Cihazı Nedir?
       </h1>
@@ -14,7 +14,7 @@ const HealyDeviceInfo = () => {
         desteklemeyi amaçlar.
       </p>
 
-      <h2 className="text-xl font-semibold text-blue-500 mt-6 mb-2">
+      <h2 className="text-xl font-semibold text-blue-500 mt-4 mb-2">
         Temel Özellikler
       </h2>
       <ul className="list-disc list-inside mb-4 text-gray-700">
@@ -24,7 +24,7 @@ const HealyDeviceInfo = () => {
         <li>Bağlantı ve Uygulama Desteği</li>
       </ul>
 
-      <h2 className="text-xl font-semibold text-blue-500 mt-6 mb-2">
+      <h2 className="text-xl font-semibold text-blue-500 mt-4 mb-2">
         Kullanım Alanları
       </h2>
       <ul className="list-disc list-inside mb-4 text-gray-700">
@@ -36,7 +36,7 @@ const HealyDeviceInfo = () => {
         <li>Zindelik ve Genel Sağlık</li>
       </ul>
 
-      <h2 className="text-xl font-semibold text-blue-500 mt-6 mb-2">
+      <h2 className="text-xl font-semibold text-blue-500 mt-4 mb-2">
         Healy'nin Bilimsel Temeli
       </h2>
       <p className="mb-4 text-gray-700">
@@ -48,7 +48,7 @@ const HealyDeviceInfo = () => {
         göstermektedir.
       </p>
 
-      <h2 className="text-xl font-semibold text-blue-500 mt-6 mb-2">
+      <h2 className="text-xl font-semibold text-blue-500 mt-4 mb-2">
         Kullanım ve Güvenlik
       </h2>
       <p className="mb-4 text-gray-700">

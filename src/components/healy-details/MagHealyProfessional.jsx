@@ -44,14 +44,17 @@ export default function MagHealyProfessional() {
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
       >
         <div className="flex w-[90%] flex-col lg:flex-row">
-          <div className=" mr-10">
+          <div className=" md:mt-10">
             <img
               src={healy[6].img}
               alt={healy[6].name}
               className="w-[150rem] rounded-xl"
             />
           </div>
-          <div>
+          <div className='ml-10'>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold my-2">{healy[6].name}</h1>
+            </div>
             <Accordion
               open={open === 1}
               animate={CUSTOM_ANIMATION}

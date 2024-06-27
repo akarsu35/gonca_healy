@@ -43,14 +43,17 @@ export default function HealyHolisticEdition() {
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
       >
         <div className="flex w-[90%] flex-col lg:flex-row">
-          <div className=" mr-10">
+          <div className=" md:mt-10">
             <img
               src={healy[1].img}
               alt={healy[1].name}
               className="w-[90rem] rounded-xl"
             />
           </div>
-          <div>
+          <div className='ml-10'>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold my-2">{healy[1].name}</h1>
+            </div>
             <Accordion
               open={open === 1}
               animate={CUSTOM_ANIMATION}

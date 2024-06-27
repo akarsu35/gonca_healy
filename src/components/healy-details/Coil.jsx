@@ -39,12 +39,18 @@ export default function Coil() {
 
   return (
     <>
-      <div key={healy[7].id} className="flex w-[90%] min-h-[70vh] justify-center mt-10">
+      <div
+        key={healy[7].id}
+        className="flex w-[90%] min-h-[70vh] justify-center mt-10"
+      >
         <div className="flex flex-col w-[90%] lg:flex-row">
-          <div>
-            <img src={healy[7].img} alt={healy[7].name} className='w-[30rem]' />
+          <div className='md:mt-12'>
+            <img src={healy[7].img} alt={healy[7].name} className="w-[30rem]" />
           </div>
-          <div >
+          <div>
+            <div className='text-center'>
+              <h1 className='text-4xl font-bold my-2'>{healy[7].name}</h1>
+            </div>
             <Accordion
               open={open === 1}
               animate={CUSTOM_ANIMATION}

@@ -1,8 +1,6 @@
-// InstagramEmbed.js
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 const InstagramEmbed = ({ url }) => {
-  const [isUpdate,setIsUpdate]=useState(true)
   useEffect(() => {
     const script = document.createElement('script')
     script.async = true
@@ -12,18 +10,17 @@ const InstagramEmbed = ({ url }) => {
     return () => {
       document.body.removeChild(script)
     }
-  },[isUpdate])
+  }, [url])
 
   return (
-    <div className="flex justify-center items-center shadow-customr rounded-xl sm:w-full ">
+    <div className="flex justify-center items-center shadow-customr rounded-xl ">
       <blockquote
-        className="instagram-media "
+        className="instagram-media"
         data-instgrm-permalink={url}
         data-instgrm-version="14"
         style={{
           width: '100%',
-          maxHeight:'50rem'
-      
+          maxHeight: '50rem',
         }}
       ></blockquote>
     </div>

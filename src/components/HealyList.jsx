@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import healy from '../data/healy'
 import Healy from './Healy'
-import HealyDetails from './HealyDetails'
-import { Link } from 'react-router-dom'
 
 export default function HealyList() {
   const [selectedHealy,setSelectedHealy]=useState(null)
@@ -14,10 +12,10 @@ export default function HealyList() {
         <div className="md:ml-5 w-[90%] flex">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:mx-auto">
             {healy.map((h, index) => {
-              const { id, name, img } = h
+              const { id, name, img,path } = h
               return (
                 <div key={index}>
-                  <Healy id={id} name={name} img={img} />
+                  <Healy id={id} name={name} img={img} path={path} />
                 </div>
               )
             })}

@@ -72,12 +72,22 @@ export default function HealyGoldEdition() {
 
   return (
     <>
-      <div key={healy[0].id} className="flex w-[90%] min-h-[70vh] mt-10 justify-center">
+      <div
+        key={healy[0].id}
+        className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
+      >
         <div className="flex w-[90%] flex-col lg:flex-row">
-          <div className=' mr-10'>
-            <img src={healy[0].img} alt={healy[0].name} className="w-[90rem] rounded-xl " />
+          <div className='md:mt-10'>
+            <img
+              src={healy[0].img}
+              alt={healy[0].name}
+              className="w-[90rem] rounded-xl "
+            />
           </div>
-          <div>
+          <div className='ml-10'>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold my-2">{healy[0].name}</h1>
+            </div>
             <Accordion
               open={open === 1}
               animate={CUSTOM_ANIMATION}

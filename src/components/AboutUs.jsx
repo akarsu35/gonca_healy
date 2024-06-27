@@ -1,19 +1,18 @@
-import { Link } from 'react-router-dom'
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className=" flex h-96 relative">
+    <div className="flex flex-col justify-center items-center ">
+      <div className=" flex max-h-96 relative mb-16">
         <div>
           <img
             src="./images/about-us11.jpg"
             alt="about-us"
-            className="w-full h-96"
+            className="w-[100vw] max-h-[30rem]"
           />
         </div>
         <div className="absolute top-[50%] left-[50%]">
           {' '}
-          <h1 className="text-white text-6xl">Yaşamın için Frekanslar</h1>
+          <h1 className="text-white sm:text-4xl md:text-5xl lg:text-6xl">Yaşamın için Frekanslar</h1>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center my-10 w-[90%]">

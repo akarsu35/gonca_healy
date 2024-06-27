@@ -83,6 +83,7 @@ const navListMenuItems = [
     path: '/coil',
   },
 ]
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
