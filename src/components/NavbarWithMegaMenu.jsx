@@ -104,12 +104,12 @@ function NavListMenu() {
               >
                 {title}
               </Typography>
-              <Typography
+              {/* <Typography
                 variant="paragraph"
                 className="text-xs !font-medium text-blue-gray-500"
               >
                 {description}
-              </Typography>
+              </Typography> */}
            
           </div>
         </MenuItem>
