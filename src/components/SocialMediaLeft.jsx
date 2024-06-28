@@ -50,7 +50,8 @@ export default function SocialMediaLeft() {
               </a>
             </div>
             <div className="w-[4rem] bg-[#B756A0] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
-              <a href="https://wa.me/905510141450" target="_blank">
+              <a href="https://wa.me/905510141450" target="_blank" aria-label='WhatsApp ile iltişime geçin'>
+              
                 <FaWhatsapp className="text-white text-[2.25rem] swing-animation" />
               </a>
             </div>
