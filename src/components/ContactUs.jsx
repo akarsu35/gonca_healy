@@ -1,6 +1,14 @@
 
 import React, { useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+  FaEnvelope,
+} from 'react-icons/fa'
 export default function ContactUs() {
   const form = useRef()
   const [name,setName]=useState('')
@@ -134,13 +142,36 @@ export default function ContactUs() {
           >
             Gönder
           </button>
-          
         </form>
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800">
-            İletişim İçin
-          </h3>
-          <p className="text-gray-600 mt-2">
+        <div className="mt-6 space-y-2">
+          <h3 className="text-xl text-center font-semibold text-gray-800">Diğer İletişim Kanallarımız</h3>
+       
+          <div className="flex justify-between">
+            <a
+              href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
+              target="_blank" // Bağlantının yeni bir sekmede açılması için
+              rel="noopener noreferrer" // Güvenlik için
+              className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="text-white text-4xl" />
+            </a>
+            <a
+              href="https://wa.me/905510141450"
+              className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              <FaWhatsapp className="text-white text-4xl" />
+            </a>
+           
+            <a
+              href="mailto:goncaakarsu35@gmail.com"
+              className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              <FaEnvelope className="text-white text-4xl" />
+            </a>
+            
+          </div>
+          {/* <p className="text-gray-600 mt-2">
             <a
               href="https://wa.me/05510141450"
               className="text-blue-500"
@@ -166,7 +197,7 @@ export default function ContactUs() {
             >
               E-mail
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
