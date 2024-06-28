@@ -7,11 +7,12 @@ import {
   FaWhatsapp,
   FaEnvelope,
 } from 'react-icons/fa'
+import Warning from './Warning'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto text-center">
+    <footer className="flex flex-col justify-center items-center bg-gray-900 text-white py-8">
+      <div className="container text-center">
         <div className="mb-4">
           <h2 className="text-2xl font-bold">Bizi Takip Edin</h2>
         </div>
@@ -69,6 +70,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center p-4 text-center">
+        <Warning />
       </div>
     </footer>
   )

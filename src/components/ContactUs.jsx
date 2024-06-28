@@ -1,13 +1,26 @@
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
 export default function ContactUs() {
   const form = useRef()
+  const [name,setName]=useState('')
+  const [email,setEmail]=useState('')
+  const [message,setMessage]=useState('')
 
   const sendEmail = (e) => {
     e.preventDefault()
-
-    emailjs
+    setName(e.target.name.value)
+    setEmail(e.target.email.value)
+    setMessage(e.target.message.value)
+    // console.log(e)
+    // console.log(e.target.name.value,e.target.email,e.target.message)
+    if (e.target.name.value === '') {
+      alert('Lütfen isminizi giriniz')
+    } else if (e.target.email.value === '') {
+      alert('Lütfen e-postanızı giriniz')
+    } else if (e.target.message.value === '') {
+      alert('Lütfen mesajınızı giriniz')
+    }else{emailjs
       .sendForm(
         'service_42891ip',
         'template_wrvbani',
@@ -18,12 +31,18 @@ export default function ContactUs() {
         (result) => {
           console.log(result.text)
           alert('E-posta başarıyla gönderildi!')
+          // Form alanlarını temizle
+          setName('')
+          setEmail('')
+          setMessage('')
+          // Form elemanlarını sıfırla
+          e.target.reset()
         },
         (error) => {
           console.log(error.text)
           alert('E-posta gönderilirken bir hata oluştu.')
         }
-      )
+      )}
   }
 
   return (
@@ -31,7 +50,7 @@ export default function ContactUs() {
       <div className="bg-white p-10 rounded-lg shadow-lg max-w-lg w-full">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">İletişim</h2>
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
-          <div>
+          {/* <div>
             <label htmlFor="name" className="block text-gray-700">
               Adınız
             </label>
@@ -41,8 +60,23 @@ export default function ContactUs() {
               name="user_name"
               className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
+          </div> */}
+          <div className="relative h-11 w-full min-w-[200px]">
+            <input
+              className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder=" "
+              name="user_name"
+              type="text"
+              id="name"
+            />
+            <label
+              htmlFor="name"
+              className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Adınız
+            </label>
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="email" className="block text-gray-700">
               Email
             </label>
@@ -52,8 +86,23 @@ export default function ContactUs() {
               name="user_email"
               className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
+          </div> */}
+          <div className="relative h-11 w-full min-w-[200px]">
+            <input
+              className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder=" "
+              type="email"
+              id="email"
+              name="user_email"
+            />
+            <label
+              htmlFor="email"
+              className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Email
+            </label>
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="message" className="block text-gray-700">
               Mesajınız
             </label>
@@ -63,46 +112,59 @@ export default function ContactUs() {
               className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
               rows="4"
             ></textarea>
+          </div> */}
+          <div className="relative  w-full min-w-[200px]">
+            <textarea
+              className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder=" "
+              id="message"
+              name="message"
+              rows="4"
+            ></textarea>
+            <label
+              htmlFor="message"
+              className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+            >
+              Mesajınız
+            </label>
           </div>
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700 transition duration-200"
+            className="w-full bg-[#A78F4F] text-white p-2 rounded hover:bg-indigo-700 transition duration-200"
           >
             Gönder
           </button>
+          
         </form>
         <div className="mt-6">
           <h3 className="text-xl font-semibold text-gray-800">
-            İletişim Bilgileri
+            İletişim İçin
           </h3>
           <p className="text-gray-600 mt-2">
-            WhatsApp:{' '}
             <a
               href="https://wa.me/05510141450"
               className="text-blue-500"
               target="_blank"
             >
-              05510141450
+              WhatsApp
             </a>
           </p>
           <p className="text-gray-600 mt-2">
-            Instagram:{' '}
             <a
               href="https://instagram.com/numeroloji_gonca"
               className="text-blue-500"
               target="_blank"
             >
-              @numeroloji_gonca
+              Instagram
             </a>
           </p>
           <p className="text-gray-600 mt-2">
-            Email:{' '}
             <a
               href="mailto:goncaakarsu35@gmail.com"
               className="text-blue-500"
               target="_blank"
             >
-              goncaakarsu35@gmail.com
+              E-mail
             </a>
           </p>
         </div>
