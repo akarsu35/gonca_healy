@@ -15,6 +15,7 @@ export default function CarouselFromYou() {
           <button
             onClick={handlePrev}
             className="absolute top-1/2 left-2 transform -translate-y-1/2  p-2 rounded-full bg-[#C0A55E]"
+            id='prevArrow'
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +37,7 @@ export default function CarouselFromYou() {
           <button
             onClick={handleNext}
             className="absolute top-1/2 right-2 transform -translate-y-1/2  p-2 rounded-full bg-[#B756A0] "
+            id='nextArrow'
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

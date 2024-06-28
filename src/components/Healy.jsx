@@ -6,16 +6,7 @@ import {
   Typography,
   Button,
 } from '@material-tailwind/react'
-import { useState } from 'react'
-import HealyGoldEdition from './healy-details/HealyGoldEdition'
-import { FlagIcon } from '@heroicons/react/24/outline'
-import HealyHolisticEdition from './healy-details/HealyHolisticEdition'
-import HealyResonanceEdition from './healy-details/HealyResonanceEdition'
-import HealyResonancePlusEdition from './healy-details/HealyResonancePlusEdition'
-import HealyProfessionalEdition from './healy-details/HealyProfessionalEdition'
-import MagHealyClassic from './healy-details/MagHealyClassic'
-import MagHealyProfessional from './healy-details/MagHealyProfessional'
-import Coil from './healy-details/Coil'
+
 import { Link } from 'react-router-dom'
 
 export default function Healy({ id, name, img,path }) {
@@ -65,7 +56,7 @@ export default function Healy({ id, name, img,path }) {
         <img src={img} alt={name} />
       </CardHeader>
       <CardBody>
-        <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
+        <Typography variant="h1" color="blue-gray" className="mb-2 text-center text-xl">
           {name}
         </Typography>
       </CardBody>

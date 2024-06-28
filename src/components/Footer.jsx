@@ -20,12 +20,14 @@ const Footer = () => {
           <div className="flex gap-2 mx-4">
             <a
               href="#"
+              aria-label="Facebook sayfamızı ziyaret et"
               className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
             >
               <FaFacebook className="text-white text-lg" />
             </a>
             <a
               href="#"
+              aria-label="Twitter sayfamızı ziyaret et"
               className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
             >
               <FaTwitter className="text-white text-lg" />
@@ -35,11 +37,15 @@ const Footer = () => {
               target="_blank" // Bağlantının yeni bir sekmede açılması için
               rel="noopener noreferrer" // Güvenlik için
               className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
-              aria-label="Instagram"
+              aria-label="Instagram sayfamızı ziyaret et"
             >
               <FaInstagram className="text-white text-lg" />
             </a>
-            <a className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+            <a
+              href="#"
+              aria-label="YouTube kanalımızı ziyaret et"
+              className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+            >
               <FaYoutube className="text-white text-lg" />
             </a>
           </div>
@@ -52,12 +58,16 @@ const Footer = () => {
             </a>
             <a
               href="https://wa.me/905510141450"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hidden md:block"
+              aria-label="WhatsApp ile iletişime geç"
             >
               0551 014 14 50
             </a>
             <a
               href="mailto:goncaakarsu35@gmail.com"
+              aria-label="E-posta gönder"
               className="bg-[#B756A0] rounded-full p-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
             >
               <FaEnvelope className="text-white text-lg" />
@@ -65,6 +75,7 @@ const Footer = () => {
             <a
               href="mailto:goncaakarsu35@gmail.com"
               className="text-white hidden md:block"
+              aria-label="E-posta gönder"
             >
               goncaakarsu35@gmail.com
             </a>

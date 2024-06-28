@@ -144,32 +144,35 @@ export default function ContactUs() {
           </button>
         </form>
         <div className="mt-6 space-y-2">
-          <h3 className="text-xl text-center font-semibold text-gray-800">Diğer İletişim Kanallarımız</h3>
-       
+          <h3 className="text-xl text-center font-semibold text-gray-800">
+            Diğer İletişim Kanallarımız
+          </h3>
+
           <div className="flex justify-between">
             <a
               href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
               target="_blank" // Bağlantının yeni bir sekmede açılması için
               rel="noopener noreferrer" // Güvenlik için
               className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
-              aria-label="Instagram"
+              aria-label="Instagram sayfamızı ziyaret et"
             >
               <FaInstagram className="text-white text-4xl" />
             </a>
             <a
               href="https://wa.me/905510141450"
+              aria-label="WhatsApp ile iletişime geç"
               className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
             >
               <FaWhatsapp className="text-white text-4xl" />
             </a>
-           
+
             <a
               href="mailto:goncaakarsu35@gmail.com"
+              aria-label="E-posta gönder"
               className="bg-[#B756A0] rounded-full p-2 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
             >
               <FaEnvelope className="text-white text-4xl" />
             </a>
-            
           </div>
           {/* <p className="text-gray-600 mt-2">
             <a

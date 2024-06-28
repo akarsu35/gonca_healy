@@ -44,12 +44,13 @@ export default function SocialMediaLeft() {
                 className="text-white swing-animation text-center"
                 target="_blank"
                 rel="noreferrer noopener"
+                aria-label="Healy Referans Linki"
               >
                 Referans Link
               </a>
             </div>
             <div className="w-[4rem] bg-[#B756A0] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
-              <a href="https://wa.me/905510141450" target='_blank'>
+              <a href="https://wa.me/905510141450" target="_blank">
                 <FaWhatsapp className="text-white text-[2.25rem] swing-animation" />
               </a>
             </div>
@@ -58,17 +59,20 @@ export default function SocialMediaLeft() {
                 href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
                 target="_blank" // Bağlantının yeni bir sekmede açılması için
                 rel="noopener noreferrer" // Güvenlik için
-                aria-label="Instagram"
+                aria-label="Instagram sayfamızı ziyaret et"
               >
                 <FaInstagram className="text-white text-[2rem] swing-animation" />
               </a>
             </div>
 
             <div className="w-[3rem] bg-[#BFA55E] rounded-e-md flex justify-center items-center h-12 hover:w-[6rem] duration-300">
-              <a href="mailto:goncaakarsu35@gmail.com">
+              <a
+                href="mailto:goncaakarsu35@gmail.com"
+                aria-label="E-posta gönder"
+              >
                 <FaEnvelope className="text-white text-[1.75rem] swing-animation" />
               </a>
-              <a href="mailto:goncaakarsu35@gmail.com"></a>
+              
             </div>
           </div>
 
