@@ -29,7 +29,7 @@ function Icon({ id, open }) {
     </svg>
   )
 }
-
+import { Helmet } from 'react-helmet'
 import healy from '../../data/healy'
 
 export default function HealyProfessionalEdition() {
@@ -39,6 +39,17 @@ export default function HealyProfessionalEdition() {
 
   return (
     <>
+      <Helmet>
+        <title>Healy Professional Edition | Gonca Akarsu</title>
+        <meta
+          name="description"
+          content="Healy Professional Edition ile uzmanlık düzeyinde frekans terapisi. Terapistler ve sağlık profesyonelleri için özel tasarım."
+        />
+        <meta
+          name="keywords"
+          content="healy professional edition, profesyonel frekans terapisi, enerji uzmanları için healy"
+        />
+      </Helmet>
       <div
         key={healy[4].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
@@ -51,7 +62,7 @@ export default function HealyProfessionalEdition() {
               className="w-[90rem] rounded-xl"
             />
           </div>
-          <div className='ml-10'>
+          <div className="ml-10">
             <div className="text-center">
               <h1 className="text-4xl font-bold my-2">{healy[4].name}</h1>
             </div>

@@ -31,7 +31,7 @@ function Icon({ id, open }) {
 }
 
 import healy from '../../data/healy'
-
+import { Helmet } from 'react-helmet'
 export default function HealyResonancePlusEdition() {
   const [open, setOpen] = React.useState(0)
 
@@ -39,6 +39,17 @@ export default function HealyResonancePlusEdition() {
 
   return (
     <>
+      <Helmet>
+        <title>Healy Resonance Plus Edition | Gonca Akarsu</title>
+        <meta
+          name="description"
+          content="Healy Resonance Plus Edition ile en kapsamlı enerji ve frekans terapisi deneyimi. Profesyonel kullanım için ideal."
+        />
+        <meta
+          name="keywords"
+          content="healy resonance plus edition, ileri düzey frekans terapisi, profesyonel enerji analizi"
+        />
+      </Helmet>
       <div
         key={healy[3].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
@@ -51,7 +62,7 @@ export default function HealyResonancePlusEdition() {
               className="w-[90rem] rounded-xl"
             />
           </div>
-          <div className='ml-10'>
+          <div className="ml-10">
             <div className="text-center">
               <h1 className="text-4xl font-bold my-2">{healy[3].name}</h1>
             </div>

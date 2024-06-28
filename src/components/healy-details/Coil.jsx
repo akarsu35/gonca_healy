@@ -31,7 +31,7 @@ function Icon({ id, open }) {
 }
 
 import healy from '../../data/healy'
-
+import { Helmet } from 'react-helmet'
 export default function Coil() {
   const [open, setOpen] = React.useState(0)
 
@@ -39,17 +39,28 @@ export default function Coil() {
 
   return (
     <>
+      <Helmet>
+        <title>Healy Coil | Gonca Akarsu</title>
+        <meta
+          name="description"
+          content="Healy Coil ile frekans terapinizi güçlendirin. Healy cihazınız için özel tasarlanmış, etkili frekans iletim aksesuarı."
+        />
+        <meta
+          name="keywords"
+          content="healy coil, frekans terapisi aksesuarı, healy eklentisi"
+        />
+      </Helmet>
       <div
         key={healy[7].id}
         className="flex w-[90%] min-h-[70vh] justify-center mt-10"
       >
         <div className="flex flex-col w-[90%] lg:flex-row">
-          <div className='md:mt-12'>
+          <div className="md:mt-12">
             <img src={healy[7].img} alt={healy[7].name} className="w-[30rem]" />
           </div>
           <div>
-            <div className='text-center'>
-              <h1 className='text-4xl font-bold my-2'>{healy[7].name}</h1>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold my-2">{healy[7].name}</h1>
             </div>
             <Accordion
               open={open === 1}

@@ -31,7 +31,7 @@ function Icon({ id, open }) {
 }
 
 import healy from '../../data/healy'
-
+import { Helmet } from 'react-helmet'
 export default function MagHealyClassic() {
   const [open, setOpen] = React.useState(0)
 
@@ -39,6 +39,17 @@ export default function MagHealyClassic() {
 
   return (
     <>
+      <Helmet>
+        <title>MagHealy Classic Edition | Gonca Akarsu</title>
+        <meta
+          name="description"
+          content="MagHealy Classic Edition ile manyetik alan terapisinin gücünü keşfedin. Evde kullanım için ideal, temel manyetik terapi cihazı."
+        />
+        <meta
+          name="keywords"
+          content="maghealy classic edition, manyetik alan terapisi, ev kullanımı için maghealy"
+        />
+      </Helmet>
       <div
         key={healy[5].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
@@ -51,7 +62,7 @@ export default function MagHealyClassic() {
               className="w-[150rem] rounded-xl"
             />
           </div>
-          <div className='ml-10'>
+          <div className="ml-10">
             <div className="text-center">
               <h1 className="text-4xl font-bold my-2">{healy[5].name}</h1>
             </div>

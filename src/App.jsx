@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { NavbarWithMegaMenu } from './components/NavbarWithMegaMenu'
 import NavUp from './components/NavUp'
 import Hero from './components/Hero'
@@ -28,7 +29,17 @@ import ContactUs from './components/ContactUs'
 function App() {
   return (
     <>
-      
+      <Helmet>
+        <title>Gonca Akarsu | Healy ve Numeroloji Uzmanı</title>
+        <meta
+          name="description"
+          content="Healy cihazı ve numeroloji ile kişisel gelişiminizi destekleyen uzman danışmanlık hizmetleri."
+        />
+        <meta
+          name="keywords"
+          content="healy, numeroloji, kişisel gelişim, enerji terapisi"
+        />
+      </Helmet>
       <NavUp />
       <NavbarWithMegaMenu />
       <Routes>
@@ -59,7 +70,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="whatis-healy" element={<WhatIsHealy />} />
         <Route path="/campaigns" element={<Campains />} />
-        <Route path="/contact-us" element={<ContactUs/>} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
 
       {/* <Routes>

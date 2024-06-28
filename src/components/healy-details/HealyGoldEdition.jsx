@@ -29,6 +29,8 @@ function Icon({ id, open }) {
     </svg>
   )
 }
+import { Helmet } from 'react-helmet'
+
 
 import healy from '../../data/healy'
 export default function HealyGoldEdition() {
@@ -72,19 +74,30 @@ export default function HealyGoldEdition() {
 
   return (
     <>
+      <Helmet>
+        <title>Healy Gold Edition | Gonca Akarsu</title>
+        <meta
+          name="description"
+          content="Healy Gold Edition hakkında detaylı bilgi ve özellikleri. Kişisel sağlık ve enerji dengeniz için Healy Gold."
+        />
+        <meta
+          name="keywords"
+          content="healy gold edition, enerji terapisi, kişisel sağlık"
+        />
+      </Helmet>
       <div
         key={healy[0].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"
       >
         <div className="flex w-[90%] flex-col lg:flex-row">
-          <div className='md:mt-10'>
+          <div className="md:mt-10">
             <img
               src={healy[0].img}
               alt={healy[0].name}
               className="w-[90rem] rounded-xl "
             />
           </div>
-          <div className='ml-10'>
+          <div className="ml-10">
             <div className="text-center">
               <h1 className="text-4xl font-bold my-2">{healy[0].name}</h1>
             </div>
