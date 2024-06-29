@@ -9,11 +9,17 @@ import {
   FaWhatsapp,
   FaEnvelope,
 } from 'react-icons/fa'
+import Snackbar from '@mui/material/Snackbar'
+
+import Alert from '@mui/material/Alert'
 export default function ContactUs() {
   const form = useRef()
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
   const [message,setMessage]=useState('')
+  const [isSnackbar, setIsSnackbar] = useState(false)
+  const [snackbarMessage, setSnackbarMessage] = useState('')
+  const [snackbarSeverity, setSnackbarSeverity] = useState('success')
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -23,11 +29,20 @@ export default function ContactUs() {
     // console.log(e)
     // console.log(e.target.name.value,e.target.email,e.target.message)
     if (e.target.name.value === '') {
-      alert('Lütfen isminizi giriniz')
+      // alert('Lütfen isminizi giriniz')
+      setSnackbarMessage('Lütfen isminizi giriniz')
+      setSnackbarSeverity('error')
+      setIsSnackbar(true)
     } else if (e.target.email.value === '') {
-      alert('Lütfen e-postanızı giriniz')
+      // alert('Lütfen e-postanızı giriniz')
+      setSnackbarMessage('Lütfen e-postanızı giriniz')
+      setSnackbarSeverity('error')
+      setIsSnackbar(true)
     } else if (e.target.message.value === '') {
-      alert('Lütfen mesajınızı giriniz')
+      // alert('Lütfen mesajınızı giriniz')
+      setSnackbarMessage('Lütfen mesajınızı giriniz')
+      setSnackbarSeverity('error')
+      setIsSnackbar(true)
     }else{emailjs
       .sendForm(
         'service_42891ip',
@@ -38,7 +53,10 @@ export default function ContactUs() {
       .then(
         (result) => {
           console.log(result.text)
-          alert('E-posta başarıyla gönderildi!')
+          // alert('E-posta başarıyla gönderildi!')
+          setSnackbarMessage('E-posta başarıyla gönderildi!')
+          setSnackbarSeverity('success')
+          setIsSnackbar(true)
           // Form alanlarını temizle
           setName('')
           setEmail('')
@@ -48,13 +66,34 @@ export default function ContactUs() {
         },
         (error) => {
           console.log(error.text)
-          alert('E-posta gönderilirken bir hata oluştu.')
+          // alert('E-posta gönderilirken bir hata oluştu.')
+          setSnackbarMessage(
+            'E-posta gönderilirken bir hata oluştu.' 
+          )
+          setSnackbarSeverity('error')
+          setIsSnackbar(true)
         }
       )}
   }
 
   return (
     <div className="min-h-[72.7vh] bg-gray-100 flex items-center justify-center">
+      {isSnackbar && (
+        <Snackbar
+          open={isSnackbar}
+          autoHideDuration={2000}
+          onClose={() => setIsSnackbar(false)}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }} // Burası konumlandırmayı sağlar
+        >
+          <Alert
+            severity={snackbarSeverity}
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            {snackbarMessage}
+          </Alert>
+        </Snackbar>
+      )}
       <div className="bg-white p-10 rounded-lg shadow-lg max-w-lg w-full">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">İletişim</h2>
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
