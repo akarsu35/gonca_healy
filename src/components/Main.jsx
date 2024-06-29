@@ -1,14 +1,11 @@
-
 import React, { useState } from 'react'
 import InstagramEmbed from './InstagramEmbed'
 
 import VideoComponent from './VideoComponent'
 import YouTubeEmbed from './YoutubeEmbed'
 
-
 export default function Home() {
-
-  const videoUrl ='./images/myvideo.mp4'
+  const videoUrl = './images/myvideo.mp4'
 
   const handleVideoClick = () => {
     setVideoLoaded(true)
@@ -20,7 +17,7 @@ export default function Home() {
       <h1 className="text-3xl sm:text-5xl font-bold mb-2">Healy Nedir ?</h1>
       <div className="w-[22rem] bg-[#63A486] h-2 mb-4 rounded-md"></div>
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2">
-        <div className="m-4 shadow-customl sm:h-96 md:h-[35rem] lg:h-[60rem] rounded-xl ">
+        <div className="m-4 shadow-customl sm:h-96 md:h-[35rem] lg:h-[60rem] rounded-xl aspect-w-1 aspect-h-1 ">
           {/* <YouTubeEmbed embedId="dQw4w9WgXcQ" /> */}
           {/* <HealyDeviceInfo /> */}
           <img
@@ -29,7 +26,7 @@ export default function Home() {
             className="rounded-xl w-full sm:h-96 md:h-[35rem] lg:h-[60rem]"
           />
         </div>
-        <div className=" p-4 md:mr-2 ">
+        <div className=" p-4 md:mr-2 aspect-w-9 aspect-h-16 ">
           <VideoComponent videoUrl={videoUrl} />
           {/* <InstagramEmbed url="https://www.instagram.com/reel/C3kGW7KNTzY/?igsh=a3oxaDE0c3R6OXBy" /> */}
           {/* <GoogleDriveVideo videoUrl={videoUrl} /> */}
