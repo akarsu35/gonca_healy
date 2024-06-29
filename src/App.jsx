@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Gonca Akarsu | Healy ve Numeroloji Uzmanı</title>
+        <title>Gonca Akarsu | Healy Sponsoru ve Numeroloji Uzmanı</title>
         <meta
           name="description"
           content="Healy cihazı ve numeroloji ile kişisel gelişiminizi destekleyen uzman danışmanlık hizmetleri."
