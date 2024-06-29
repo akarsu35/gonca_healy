@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Helmet>
-        <title>Ana Sayfa | Gonca Akarsu - Healy ve Numeroloji Uzmanı</title>
+        <title>Ana Sayfa | Gonca Akarsu - Healy Sponsoru ve Numeroloji Uzmanı</title>
         <meta
           name="description"
           content="Gonca Akarsu ile Healy cihazı ve numeroloji hizmetleri. Kişisel gelişiminiz için uzman danışmanlık ve destek alın."

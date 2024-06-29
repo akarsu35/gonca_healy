@@ -16,7 +16,7 @@ export default function Home() {
   // const videoUrl =
   //   'https://drive.google.com/file/d/1DNiIpVHgcLda_JRUa1Jt5Zz2QAGlzHvL/view?usp=sharing' // Google Drive'dan aldığınız video linki
   return (
-    <div className="flex justify-center items-center flex-col mt-8 ">
+    <div className="flex justify-center items-center flex-col mt-8  ">
       <h1 className="text-3xl sm:text-5xl font-bold mb-2">Healy Nedir ?</h1>
       <div className="w-[22rem] bg-[#63A486] h-2 mb-4 rounded-md"></div>
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-2">
