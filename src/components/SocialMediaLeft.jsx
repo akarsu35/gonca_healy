@@ -92,9 +92,9 @@ export default function SocialMediaLeft() {
             {/* social animated */}
             <div>
               <div className="flex justify-center items-center ml-4  ">
-                <div className="relative animate-pings w-12 h-12 bg-red-500 rounded-full top-8"></div>
+                <div className="relative animate-pings w-12 h-12 bg-red-500 rounded-full top-9"></div>
                 <button
-                  className="absolute bg-blue-500 text-white font-bold w-12 h-12 rounded-full top-8 focus:outline-none z-10 "
+                  className="absolute bg-blue-500 text-white font-bold w-12 h-12 rounded-full top-9 focus:outline-none z-10 "
                   onClick={handleClick}
                 >
                   İnfo
@@ -106,7 +106,7 @@ export default function SocialMediaLeft() {
                   open ? 'scale-100 ' : 'scale-0'
                 } transform origin-center absolute inset-0 flex justify-center items-center`}
               >
-                <div className="absolute -top-20 left-2 animate-bounce bg-green-700 rounded-full w-12 h-12">
+                <div className="absolute -top-16 left-2 animate-bounce bg-green-700 rounded-full w-12 h-12">
                   <a
                     href="https://eu.healy.shop/?partnername=6020-9879-1624"
                     target="_blank"
@@ -116,7 +116,7 @@ export default function SocialMediaLeft() {
                     <SiBiolink className="text-white text-[2rem] m-2" />
                   </a>
                 </div>
-                <div className="absolute -top-14 left-16 rounded-full w-12 h-12 animate-bounce bg-[#B756A0]  ">
+                <div className="absolute -top-12 left-16 rounded-full w-12 h-12 animate-bounce bg-[#B756A0]  ">
                   <a
                     href="https://wa.me/905510141450"
                     target="_blank"
@@ -125,7 +125,7 @@ export default function SocialMediaLeft() {
                     <FaWhatsapp className="text-white text-[2.25rem] m-1.5 " />
                   </a>
                 </div>
-                <div className="absolute -right-14 top-3 w-12 h-12 animate-bounce bg-[#5297C8] rounded-full">
+                <div className="absolute -right-14 top-5 w-12 h-12 animate-bounce bg-[#5297C8] rounded-full">
                   <a
                     href="https://www.instagram.com/numeroloji_gonca" // Instagram profilinizin URL'sini buraya ekleyin
                     target="_blank" // Bağlantının yeni bir sekmede açılması için
@@ -135,7 +135,7 @@ export default function SocialMediaLeft() {
                     <FaInstagram className="text-white text-[2rem] m-2" />
                   </a>
                 </div>
-                <div className="absolute -bottom-24 left-2 w-12 h-12 animate-bounce bg-[#BFA55E] rounded-full">
+                <div className="absolute -bottom-[6.5rem] left-2 w-12 h-12 animate-bounce bg-[#BFA55E] rounded-full">
                   <a
                     href="mailto:goncaakarsu35@gmail.com"
                     aria-label="E-posta gönder"
