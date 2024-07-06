@@ -92,9 +92,9 @@ export default function SocialMediaLeft() {
             {/* social animated */}
             <div>
               <div className="flex justify-center items-center ml-4  ">
-                <div className="relative animate-pings w-12 h-12 bg-red-500 rounded-full top-6"></div>
+                <div className="relative animate-pings w-12 h-12 bg-red-500 rounded-full top-8"></div>
                 <button
-                  className="absolute bg-blue-500 text-white font-bold w-12 h-12 rounded-full top-6 focus:outline-none z-10 "
+                  className="absolute bg-blue-500 text-white font-bold w-12 h-12 rounded-full top-8 focus:outline-none z-10 "
                   onClick={handleClick}
                 >
                   İnfo
