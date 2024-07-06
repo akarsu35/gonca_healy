@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
 import {
@@ -14,9 +13,9 @@ import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
 export default function ContactUs() {
   const form = useRef()
-  const [name,setName]=useState('')
-  const [email,setEmail]=useState('')
-  const [message,setMessage]=useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   const [isSnackbar, setIsSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState('')
   const [snackbarSeverity, setSnackbarSeverity] = useState('success')
@@ -43,37 +42,37 @@ export default function ContactUs() {
       setSnackbarMessage('Lütfen mesajınızı giriniz')
       setSnackbarSeverity('error')
       setIsSnackbar(true)
-    }else{emailjs
-      .sendForm(
-        'service_42891ip',
-        'template_wrvbani',
-        form.current,
-        'tC1TW-Wv2iQYsTp_j'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-          // alert('E-posta başarıyla gönderildi!')
-          setSnackbarMessage('E-posta başarıyla gönderildi!')
-          setSnackbarSeverity('success')
-          setIsSnackbar(true)
-          // Form alanlarını temizle
-          setName('')
-          setEmail('')
-          setMessage('')
-          // Form elemanlarını sıfırla
-          e.target.reset()
-        },
-        (error) => {
-          console.log(error.text)
-          // alert('E-posta gönderilirken bir hata oluştu.')
-          setSnackbarMessage(
-            'E-posta gönderilirken bir hata oluştu.' 
-          )
-          setSnackbarSeverity('error')
-          setIsSnackbar(true)
-        }
-      )}
+    } else {
+      emailjs
+        .sendForm(
+          'service_42891ip',
+          'template_wrvbani',
+          form.current,
+          'tC1TW-Wv2iQYsTp_j'
+        )
+        .then(
+          (result) => {
+            console.log(result.text)
+            // alert('E-posta başarıyla gönderildi!')
+            setSnackbarMessage('E-posta başarıyla gönderildi!')
+            setSnackbarSeverity('success')
+            setIsSnackbar(true)
+            // Form alanlarını temizle
+            setName('')
+            setEmail('')
+            setMessage('')
+            // Form elemanlarını sıfırla
+            e.target.reset()
+          },
+          (error) => {
+            console.log(error.text)
+            // alert('E-posta gönderilirken bir hata oluştu.')
+            setSnackbarMessage('E-posta gönderilirken bir hata oluştu.')
+            setSnackbarSeverity('error')
+            setIsSnackbar(true)
+          }
+        )
+    }
   }
 
   return (
@@ -186,6 +185,7 @@ export default function ContactUs() {
           <h3 className="text-xl text-center font-semibold text-gray-800">
             Diğer İletişim Kanallarımız
           </h3>
+      
 
           <div className="flex justify-between">
             <a
