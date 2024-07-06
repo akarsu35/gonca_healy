@@ -113,7 +113,9 @@ export default function SocialMediaLeft() {
                     rel="noreferrer noopener"
                     aria-label="Healy Referans Linki"
                   >
-                    <SiBiolink className="text-white text-[2rem] m-2" />
+                    {/* <SiBiolink className="text-white text-[2rem] m-2" /> */}
+                    <p className='text-white text-sm font-[1000] ml-2 mt-1 '>REF. <br /> LİNK</p>
+                    
                   </a>
                 </div>
                 <div className="absolute -top-12 left-16 rounded-full w-12 h-12 animate-bounce bg-[#B756A0]  ">
