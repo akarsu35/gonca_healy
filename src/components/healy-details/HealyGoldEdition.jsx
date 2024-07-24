@@ -75,14 +75,17 @@ export default function HealyGoldEdition() {
   return (
     <>
       <Helmet>
-        <title>Healy Gold Edition | Gonca Akarsu</title>
+        <title>
+          Healy Gold Edition: Sağlık ve Enerji Dengeniz İçin Frekans Terapisi |
+          Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="Healy Gold Edition hakkında detaylı bilgi ve özellikleri. Kişisel sağlık ve enerji dengeniz için Healy Gold."
+          content="Healy Gold Edition ile sağlık ve enerji dengenizi yeniden keşfedin. Kişiselleştirilmiş frekans terapisi, stres yönetimi ve daha fazlası için şimdi bilgi alın!"
         />
         <meta
           name="keywords"
-          content="healy gold edition, enerji terapisi, kişisel sağlık"
+          content="healy gold edition, enerji terapisi, kişisel sağlık,frekans terapisi,enerji dengeleme,sağlık teknolojisi,biorezonans"
         />
       </Helmet>
       <div
@@ -127,7 +130,7 @@ export default function HealyGoldEdition() {
               icon={<Icon id={3} open={open} />}
             >
               <AccordionHeader onClick={() => handleOpen(3)}>
-                Teknik Bilgiler
+               <h3>Teknik Özellikler</h3>
               </AccordionHeader>
               <AccordionBody>{healy[0].tech}</AccordionBody>
             </Accordion>

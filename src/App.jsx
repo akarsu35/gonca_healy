@@ -66,11 +66,11 @@ function App() {
           path="/maghealy-professional-edition"
           element={<MagHealyProfessional />}
         />
-        <Route path="/coil" element={<Coil />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="whatis-healy" element={<WhatIsHealy />} />
-        <Route path="/campaigns" element={<Campains />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/healy-coil" element={<Coil />} />
+        <Route path="/hakkımızda" element={<AboutUs />} />
+        <Route path="/healy-nedir?" element={<WhatIsHealy />} />
+        <Route path="/kampanyalar" element={<Campains />} />
+        <Route path="/iletişim" element={<ContactUs />} />
       </Routes>
 
       {/* <Routes>

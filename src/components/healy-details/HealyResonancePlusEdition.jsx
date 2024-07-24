@@ -40,16 +40,20 @@ export default function HealyResonancePlusEdition() {
   return (
     <>
       <Helmet>
-        <title>Healy Resonance Plus Edition | Gonca Akarsu</title>
+        <title>
+          Healy Resonance Plus Edition: Aura, Çakra ve Meridyen Analizi ile
+          Bütünsel Denge | Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="Healy Resonance Plus Edition ile en kapsamlı enerji ve frekans terapisi deneyimi. Profesyonel kullanım için ideal."
+          content="Healy Resonance Plus Edition ile enerji alanınızı derinlemesine analiz edin, blokajları çözün ve kişiselleştirilmiş frekans terapisi ile optimum sağlık ve zindeliğe kavuşun. Aura, çakra ve meridyen dengeleme için profesyonel çözüm."
         />
         <meta
           name="keywords"
-          content="healy resonance plus edition, ileri düzey frekans terapisi, profesyonel enerji analizi"
+          content="healy resonance plus edition, ileri düzey frekans terapisi, profesyonel enerji analizi, aura analizi, çakra dengeleme, meridyen terapisi, enerji tıbbı, biyoenerji, enerji uyumu, bütünsel sağlık"
         />
       </Helmet>
+
       <div
         key={healy[3].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"

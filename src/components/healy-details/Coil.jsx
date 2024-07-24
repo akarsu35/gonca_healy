@@ -40,11 +40,15 @@ export default function Coil() {
   return (
     <>
       <Helmet>
-        <title>Healy Coil | Gonca Akarsu</title>
+        <title>
+          Healy Coil: Healy Frekans Terapinizi Güçlendirin | Gonca Akarsu
+        </title>
+
         <meta
           name="description"
-          content="Healy Coil ile frekans terapinizi güçlendirin. Healy cihazınız için özel tasarlanmış, etkili frekans iletim aksesuarı."
+          content="Healy Coil ile Healy frekans terapinizi yeni bir seviyeye taşıyın. Etkili frekans iletimi, kolay kullanım ve rahatlık için tasarlandı. Şimdi keşfedin!"
         />
+
         <meta
           name="keywords"
           content="healy coil, frekans terapisi aksesuarı, healy eklentisi"
@@ -56,7 +60,7 @@ export default function Coil() {
       >
         <div className="flex flex-col w-[90%] lg:flex-row">
           <div className="md:mt-12">
-            <img src={healy[7].img} alt={healy[7].name} className="w-[30rem]" />
+            <img src={healy[7].img} alt="healy coil" className="w-[30rem]" />
           </div>
           <div>
             <div className="text-center">
@@ -88,7 +92,7 @@ export default function Coil() {
               icon={<Icon id={3} open={open} />}
             >
               <AccordionHeader onClick={() => handleOpen(3)}>
-                Teknik Bilgiler
+                <h3>Teknik Özellikler</h3>
               </AccordionHeader>
               <AccordionBody>{healy[7].tech}</AccordionBody>
             </Accordion>

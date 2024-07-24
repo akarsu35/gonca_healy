@@ -40,16 +40,20 @@ export default function MagHealyProfessional() {
   return (
     <>
       <Helmet>
-        <title>MagHealy Professional Edition | Gonca Akarsu</title>
+        <title>
+          MagHealy Professional Edition: Terapistler ve Uzmanlar İçin İleri
+          Düzey Manyetik Alan Terapisi | Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="MagHealy Professional Edition ile ileri düzey manyetik alan terapisi. Profesyonel kullanım için tasarlanmış, güçlü manyetik terapi cihazı."
+          content="MagHealy Professional Edition ile ileri düzey manyetik alan terapisi uygulayın. Terapistler ve sağlık uzmanları için özel olarak tasarlanan bu güçlü cihaz, ağrıları hafifletmeye, dolaşımı artırmaya ve hücre yenilenmesini desteklemeye yardımcı olur."
         />
         <meta
           name="keywords"
-          content="maghealy professional edition, profesyonel manyetik terapi, ileri düzey maghealy"
+          content="maghealy professional edition, profesyonel manyetik terapi, ileri düzey maghealy, manyetik alan tedavisi, ağrı terapisi, dolaşım bozuklukları, hücre yenileme, sporcu sağlığı, fizik tedavi, rehabilitasyon"
         />
       </Helmet>
+
       <div
         key={healy[6].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"

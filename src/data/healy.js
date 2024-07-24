@@ -84,7 +84,7 @@ const healy = [
     delivery: 'Healy Coil',
     tech: 'Versiyon 1 Boyutlar: 60 x 50 x 15 mm / 2,36 x 1,96 x 0,59 inç Ağırlık: 15 g / 0,53 oz',
     risk: 'Individualized Microcurrent Frequencies" ("IMF") Healy World ün tescilli bir teknolojisidir. Profesyonel kullanıcı deneyimlerine göre kullanıcı için en yüksek öneme sahip olduğu görülen frekanslara bir öncelik atamak için fiziksel bir gürültü üretecinden gelen verileri kullanır.',
-    path: '/coil',
+    path: '/healy-coil',
   },
 ]
 export default healy

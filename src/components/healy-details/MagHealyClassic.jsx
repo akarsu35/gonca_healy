@@ -40,16 +40,20 @@ export default function MagHealyClassic() {
   return (
     <>
       <Helmet>
-        <title>MagHealy Classic Edition | Gonca Akarsu</title>
+        <title>
+          MagHealy Classic Edition: Evde Manyetik Alan Terapisi ile Rahatlayın |
+          Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="MagHealy Classic Edition ile manyetik alan terapisinin gücünü keşfedin. Evde kullanım için ideal, temel manyetik terapi cihazı."
+          content="MagHealy Classic Edition ile manyetik alan terapisinin rahatlatıcı ve iyileştirici gücünü evinizin konforunda deneyimleyin. Ağrıları hafifletmek, stresi azaltmak ve genel sağlığı desteklemek için ideal."
         />
         <meta
           name="keywords"
-          content="maghealy classic edition, manyetik alan terapisi, ev kullanımı için maghealy"
+          content="maghealy classic edition, manyetik alan terapisi, evde manyetik terapi, ağrı kesici, stres azaltma, kas gevşetici, enerji artırıcı, manyetik alan tedavisi, doğal terapi, alternatif tıp"
         />
       </Helmet>
+
       <div
         key={healy[5].id}
         className="flex w-[90%] min-h-[70vh] mt-10 justify-center"

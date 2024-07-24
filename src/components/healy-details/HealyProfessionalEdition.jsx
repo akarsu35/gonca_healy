@@ -40,14 +40,17 @@ export default function HealyProfessionalEdition() {
   return (
     <>
       <Helmet>
-        <title>Healy Professional Edition | Gonca Akarsu</title>
+        <title>
+          Healy Professional Edition: Terapistler ve Uzmanlar İçin Gelişmiş
+          Frekans Terapisi | Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="Healy Professional Edition ile uzmanlık düzeyinde frekans terapisi. Terapistler ve sağlık profesyonelleri için özel tasarım."
+          content="Healy Professional Edition, terapistler ve sağlık profesyonelleri için ideal bir frekans terapisi cihazıdır. Geniş frekans yelpazesi, bilimsel olarak desteklenen programlar ve kullanıcı dostu arayüzü ile fark yaratın."
         />
         <meta
           name="keywords"
-          content="healy professional edition, profesyonel frekans terapisi, enerji uzmanları için healy"
+          content="healy professional edition, profesyonel frekans terapisi, enerji uzmanları, terapistler, sağlık profesyonelleri, frekans cihazı, biorezonans, enerji dengeleme, kişiselleştirilmiş terapi"
         />
       </Helmet>
       <div

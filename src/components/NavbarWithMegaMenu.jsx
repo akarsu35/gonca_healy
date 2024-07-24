@@ -80,11 +80,11 @@ const navListMenuItems = [
     title: 'COİL',
     description: 'Find the perfect solution for your needs.',
     icon: NewspaperIcon,
-    path: '/coil',
+    path: '/healy-coil',
   },
 ]
 
-function NavListMenu() {
+function NavListMenu({ setOpenNav }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const renderItems = navListMenuItems.map(
@@ -92,11 +92,10 @@ function NavListMenu() {
       { icon, title, description, path },
       key //dropdown menu
     ) => (
-      <Link to={path} key={key}>
-      <a href='#' key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div>
-           
+      <Link to={path} key={key} onClick={() => setOpenNav(false)}>
+        <a href="#" key={key}>
+          <MenuItem className="flex items-center gap-3 rounded-lg">
+            <div>
               <Typography
                 variant="h6"
                 color="blue-gray"
@@ -110,12 +109,10 @@ function NavListMenu() {
               >
                 {description}
               </Typography> */}
-           
-          </div>
-        </MenuItem>
-      </a>
-
-      </Link> 
+            </div>
+          </MenuItem>
+        </a>
+      </Link>
     )
   )
 
@@ -164,7 +161,7 @@ function NavListMenu() {
   )
 }
 
-function NavList() {
+function NavList({ setOpenNav }) {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -175,7 +172,9 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/">ANASAYFA</Link>
+          <Link to="/" onClick={() => setOpenNav(false)}>
+            ANASAYFA
+          </Link>
         </ListItem>
       </Typography>
 
@@ -187,12 +186,14 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/about-us">HAKKIMIZDA</Link>
+          <Link to="/hakkımızda" onClick={() => setOpenNav(false)}>
+            HAKKIMIZDA
+          </Link>
         </ListItem>
       </Typography>
 
       {/* dropdown menu */}
-      <NavListMenu />
+      <NavListMenu setOpenNav={setOpenNav} />
 
       <Typography
         as="a"
@@ -202,7 +203,10 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/whatis-healy"> HEALY NEDİR</Link>
+          <Link to="/healy-nedir?" onClick={() => setOpenNav(false)}>
+            {' '}
+            HEALY NEDİR
+          </Link>
         </ListItem>
       </Typography>
       <Typography
@@ -213,7 +217,10 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/campaigns"> KAMPANYALAR</Link>
+          <Link to="/kampanyalar" onClick={() => setOpenNav(false)}>
+            {' '}
+            KAMPANYALAR
+          </Link>
         </ListItem>
       </Typography>
       {/* <Typography
@@ -233,7 +240,10 @@ function NavList() {
         className="font-bold"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <Link to="/contact-us"> İLETİŞİM</Link>
+          <Link to="/iletişim" onClick={() => setOpenNav(false)}>
+            {' '}
+            İLETİŞİM
+          </Link>
         </ListItem>
       </Typography>
     </List>
@@ -285,11 +295,10 @@ export function NavbarWithMegaMenu() {
             ></img>
           </a>
 
-         
           <div className="hidden lg:block">
-            <NavList />
+            <NavList setOpenNav={setOpenNav} />
           </div>
-         
+
           <IconButton
             variant="text"
             color="blue-gray"
@@ -304,7 +313,7 @@ export function NavbarWithMegaMenu() {
           </IconButton>
         </div>
         <Collapse open={openNav}>
-          <NavList />
+          <NavList setOpenNav={setOpenNav} />
         </Collapse>
       </Navbar>
     </div>

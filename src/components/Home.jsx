@@ -11,16 +11,17 @@ export default function Home() {
   return (
     <div>
       <Helmet>
-        <title>Ana Sayfa | Gonca Akarsu - Healy Sponsoru ve Numeroloji Uzmanı</title>
+        <title>Gonca Akarsu | Healy Frekans Terapisi ve Enerji Dengeleme</title>
         <meta
           name="description"
-          content="Gonca Akarsu ile Healy cihazı ve numeroloji hizmetleri. Kişisel gelişiminiz için uzman danışmanlık ve destek alın."
+          content="Gonca Akarsu, Healy frekans terapisi ve enerji dengeleme hizmetleri sunan bir sağlık danışmanıdır. Bütünsel sağlık yaklaşımıyla kişiye özel çözümler sunar."
         />
         <meta
           name="keywords"
-          content="healy, numeroloji, kişisel gelişim, enerji terapisi, ana sayfa"
+          content="gonca akarsu, healy, frekans terapisi, enerji dengeleme, sağlık danışmanı, bütünsel sağlık, biorezonans, enerji tıbbı, aura analizi, çakra dengeleme"
         />
       </Helmet>
+
       <SocialMediaLeft />
       <Hero />
       <Main />

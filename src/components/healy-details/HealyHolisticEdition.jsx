@@ -40,14 +40,17 @@ export default function HealyHolisticEdition() {
   return (
     <>
       <Helmet>
-        <title>Healy Holistic Edition | Gonca Akarsu</title>
+        <title>
+          Healy Holistic Edition: Bütünsel Sağlığınızı Frekans Terapisi ile
+          Destekleyin | Gonca Akarsu
+        </title>
         <meta
           name="description"
-          content="Healy Holistic Edition ile bütünsel sağlık yaklaşımı. Fiziksel ve zihinsel dengeniz için kapsamlı çözümler."
+          content="Healy Holistic Edition ile enerji seviyenizi yükseltin, stresi azaltın ve genel sağlığınızı iyileştirin. Bütünsel frekans terapisi ile kendinizi daha iyi hissedin!"
         />
         <meta
           name="keywords"
-          content="healy holistic edition, bütünsel sağlık, enerji terapisi"
+          content="healy holistic edition, bütünsel sağlık, enerji terapisi, frekans terapisi, doğal sağlık, zihinsel denge, stres azaltma, biorezonans, sağlık teknolojisi"
         />
       </Helmet>
       <div
