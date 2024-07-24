@@ -1,11 +1,18 @@
-// sitemap-builder.mjs
-import sitemapMaker from 'react-router-sitemap-maker'
+import { createSitemap } from 'react-router-sitemap-maker'
 import AppRoutes from './src/AppRouter'
 
-const { createSitemap } = sitemapMaker // createSitemap fonksiyonunu al
+// Sadece route'ların URL'lerini ve diğer sitemap bilgilerini içeren bir dizi oluşturun
+const routesConfig = AppRoutes().props.children.map((route) => ({
+  path: route.props.path,
+  lastmod: new Date().toISOString(), // İsteğe bağlı: Son değişiklik tarihi
+  changefreq: 'weekly', // İsteğe bağlı: Değişim sıklığı
+  priority: 0.7, // İsteğe bağlı: Öncelik
+}))
 
 const sitemap = createSitemap({
   baseUrl: 'https://www.healyhayat.com.tr',
-})(AppRoutes())
+})(routesConfig) // Oluşturduğunuz route konfigürasyonunu kullanın
+
+console.log('sitemap:', sitemap.toString())
 
 sitemap.save('./public/sitemap.xml')
