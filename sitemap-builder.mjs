@@ -1,4 +1,7 @@
-import { createSitemap } from 'react-router-sitemap-maker'
+const { createSitemap } = require('react-router-sitemap-maker')
+
+// Kodu burada devam ettirin
+
 import AppRoutes from './src/AppRouter'
 
 // Sadece route'ların URL'lerini ve diğer sitemap bilgilerini içeren bir dizi oluşturun
