@@ -1,21 +1,38 @@
-const { createSitemap } = require('react-router-sitemap-maker')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
+const fs = require('fs')
 
-// Kodu burada devam ettirin
+// URL'leri güncelle
+const links = [
+  { url: '/', changefreq: 'daily', priority: 0.9 },
+  { url: '/healy-gold-edition', changefreq: 'weekly', priority: 0.7 },
+  { url: '/healy-holistic-edition', changefreq: 'weekly', priority: 0.7 },
+  { url: '/healy-resonance-edition', changefreq: 'weekly', priority: 0.7 },
+  { url: '/healy-resonance-plus-edition', changefreq: 'weekly', priority: 0.7 },
+  { url: '/healy-professional-edition', changefreq: 'weekly', priority: 0.7 },
+  { url: '/maghealy-classic-edition', changefreq: 'weekly', priority: 0.7 },
+  {
+    url: '/maghealy-professional-edition',
+    changefreq: 'weekly',
+    priority: 0.7,
+  },
+  { url: '/healy-coil', changefreq: 'weekly', priority: 0.7 },
+  { url: '/hakkımızda', changefreq: 'monthly', priority: 0.5 },
+  { url: '/healy-nedir?', changefreq: 'monthly', priority: 0.5 },
+  { url: '/kampanyalar', changefreq: 'monthly', priority: 0.5 },
+  { url: '/iletişim', changefreq: 'monthly', priority: 0.5 },
+]
 
-import AppRoutes from './src/AppRouter'
+// Sitemap stream'ini oluştur
+const stream = new SitemapStream({ hostname: 'https://www.healyhayat.com.tr' })
 
-// Sadece route'ların URL'lerini ve diğer sitemap bilgilerini içeren bir dizi oluşturun
-const routesConfig = AppRoutes().props.children.map((route) => ({
-  path: route.props.path,
-  lastmod: new Date().toISOString(), // İsteğe bağlı: Son değişiklik tarihi
-  changefreq: 'weekly', // İsteğe bağlı: Değişim sıklığı
-  priority: 0.7, // İsteğe bağlı: Öncelik
-}))
-
-const sitemap = createSitemap({
-  baseUrl: 'https://www.healyhayat.com.tr',
-})(routesConfig) // Oluşturduğunuz route konfigürasyonunu kullanın
-
-console.log('sitemap:', sitemap.toString())
-
-sitemap.save('./public/sitemap.xml')
+// Sitemap verisini oluştur
+streamToPromise(Readable.from(links).pipe(stream))
+  .then((data) => {
+    // Sitemap XML verisini dosyaya yaz
+    fs.writeFileSync('./dist/sitemap.xml', data.toString())
+    console.log('Sitemap başarıyla oluşturuldu!')
+  })
+  .catch((err) => {
+    console.error('Sitemap oluşturulurken hata oluştu:', err)
+  })
