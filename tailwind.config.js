@@ -15,7 +15,12 @@ module.exports = withMT({
         factCarts:
           'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
       },
-      
+      backgroundImage: {
+        notpage: "url('./images/pagenotfound.avif')",
+      },
+      backgroundPosition: {
+        'center-bottom': 'center bottom 20%', // Alt kısmı biraz yukarı kaydırarak görünür hale getirme
+      },
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],

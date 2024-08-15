@@ -246,6 +246,21 @@ function NavList({ setOpenNav }) {
           </Link>
         </ListItem>
       </Typography>
+
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-bold"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <Link to="/blog" onClick={() => setOpenNav(false)}>
+            {' '}
+            BLOG
+          </Link>
+        </ListItem>
+      </Typography>
     </List>
   )
 }
@@ -286,11 +301,11 @@ export function NavbarWithMegaMenu() {
             <img
               width="120"
               height="38"
-              src="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png"
+              src="./images/logo_healy.png"
               className="custom-logo"
               alt="Healy Shop Turkiye"
               decoding="async"
-              srcSet="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png 1x, https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1.png 2x"
+              // srcSet="https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1-120x38.png 1x, https://turkiye.healy.shop/wp-content/uploads/2022/10/Healy-Horizontal-Logo-with-Dot-RGB@2x-1.png 2x"
               sizes="(max-width: 120px) 100vw, 120px"
             ></img>
           </a>

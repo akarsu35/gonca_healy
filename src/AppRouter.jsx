@@ -16,6 +16,11 @@ import AboutUs from './components/AboutUs'
 import WhatIsHealy from './components/WhatIsHealy'
 import Campains from './components/Campaigns'
 import ContactUs from './components/ContactUs'
+import BlogList from './components/blog/BlogList'
+import Blog1 from './components/blogs_details/Blog1'
+import Blog2 from './components/blogs_details/Blog2'
+import Blog3 from './components/blogs_details/Blog3'
+
 
 const AppRouter = () => (
   <>
@@ -50,6 +55,10 @@ const AppRouter = () => (
       <Route path="/healy-nedir?" element={<WhatIsHealy />} />
       <Route path="/kampanyalar" element={<Campains />} />
       <Route path="/iletişim" element={<ContactUs />} />
+      <Route path="/blog" element={<BlogList />} />
+      <Route path="/blog1" element={<Blog1 />} />
+      <Route path="/blog2" element={<Blog2 />} />
+      <Route path="/blog3" element={<Blog3 />} />
     </Routes>
     <Footer />
   </>
